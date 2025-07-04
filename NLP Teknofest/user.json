@@ -1,0 +1,1010 @@
+[
+  {
+    "customer_id": "user_001",
+    "name": "Barış",
+    "surname": "Koç",
+    "tc_no": "12345678900",
+    "phone_number": "05551112244",
+    "current_package": "Genç Cool 25 GB",
+    "contract_end_date": "2025-12-31",
+    "payment_status": "Gecikmiş",
+    "service_status": "Aktif",
+    "age": 24,
+    "blocked_numbers": [
+      "05483687542"
+    ],
+    "occupation": "öğrenci",
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Altın Sokak No: 3",
+      "city": "Eskişehir",
+      "zip_code": "26000"
+    },
+    "authorized_contacts": [
+      {
+        "name": "Zeynep Koç",
+        "phone": "05051234567"
+      },
+      {
+        "name": "Mehmet Koç",
+        "phone": "05301112233"
+      }
+    ],
+    "usage_history": {
+      "internet_gb_used_monthly": 25,
+      "internet_avg_speed_mbps": 70,
+      "call_minutes_monthly": 1500,
+      "sms_count_monthly": 90,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": true
+    },
+    "bills": [
+      {
+        "bill_id": "B999-06",
+        "bill_date": "2025-06-20",
+        "amount": "320.00 TL",
+        "due_date": "2025-07-10",
+        "status": "Gecikmiş",
+        "details": "Haziran ayı Genç Cool 25 GB faturası",
+        "breakdown": {
+          "base": "280.00 TL",
+          "extra_usage": "20.00 TL",
+          "taxes": "20.00 TL"
+        }
+      }
+    ],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_002",
+    "name": "Ahmet",
+    "surname": "Yılmaz",
+    "tc_no": "12345678901",
+    "phone_number": "0500-123-4567",
+    "current_package": "Esnafın Yanında 30 GB Kampanyası",
+    "contract_end_date": "2026-07-01",
+    "payment_status": "Gecikmiş",
+    "service_status": "Aktif",
+    "age": 35,
+    "occupation": "esnaf",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Mevlana Mah. 45. Sokak No: 12",
+      "city": "İstanbul",
+      "zip_code": "34200"
+    },
+    "authorized_contacts": [
+      {
+        "name": "Serap Yılmaz",
+        "phone": "0507-987-1123"
+      }
+    ],
+    "usage_history": {
+      "internet_gb_used_monthly": 28,
+      "internet_avg_speed_mbps": 62,
+      "call_minutes_monthly": 2100,
+      "sms_count_monthly": 140,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [
+      {
+        "bill_id": "B2025-06-AHY",
+        "bill_date": "2025-06-15",
+        "amount": "340.00 TL",
+        "due_date": "2025-07-05",
+        "status": "Gecikmiş",
+        "details": "Haziran ayı Esnaf 30 GB faturası",
+        "breakdown": {
+          "base": "290.00 TL",
+          "extra_usage": "20.00 TL",
+          "taxes": "30.00 TL"
+        }
+      }
+    ],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_003",
+    "name": "Mert",
+    "surname": "Aslan",
+    "tc_no": "12345678903",
+    "phone_number": "05001112233",
+    "current_package": "Genç Cool 20 GB",
+    "contract_end_date": "2026-05-15",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 22,
+    "occupation": "ogrenci",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Atatürk Cad. No: 11",
+      "city": "İzmir",
+      "zip_code": "35000"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 19,
+      "internet_avg_speed_mbps": 30,
+      "call_minutes_monthly": 700,
+      "sms_count_monthly": 25,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "4G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_004",
+    "name": "Fatih",
+    "surname": "Kaya",
+    "tc_no": "12345678904",
+    "phone_number": "05335557788",
+    "current_package": "Esnafın Yanında 30 GB Kampanyası",
+    "contract_end_date": "2025-11-20",
+    "payment_status": "Gecikmiş",
+    "service_status": "Aktif",
+    "age": 41,
+    "occupation": "esnaf",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Sanayi Sitesi 5. Blok No: 7",
+      "city": "Bursa",
+      "zip_code": "16000"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 14,
+      "internet_avg_speed_mbps": 40,
+      "call_minutes_monthly": 2100,
+      "sms_count_monthly": 60,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "4G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_005",
+    "name": "Ayşe",
+    "surname": "Demir",
+    "tc_no": "12345678905",
+    "phone_number": "05009998877",
+    "current_package": "Çocuk Eğitim Paketi",
+    "contract_end_date": "2026-01-01",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 11,
+    "occupation": "cocuk",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "child",
+    "address": {
+      "street": "Yıldız Mah. 12. Sokak No: 9",
+      "city": "Ankara",
+      "zip_code": "06100"
+    },
+    "authorized_contacts": [
+      {
+        "name": "Mehmet Demir",
+        "phone": "05337776655"
+      }
+    ],
+    "usage_history": {
+      "internet_gb_used_monthly": 3,
+      "internet_avg_speed_mbps": 12,
+      "call_minutes_monthly": 80,
+      "sms_count_monthly": 5,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": true,
+    "network_mode": "4G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_006",
+    "name": "Hüseyin",
+    "surname": "Öztürk",
+    "tc_no": "12345678906",
+    "phone_number": "05441112233",
+    "current_package": "Yaş Dostu Orta",
+    "contract_end_date": "2026-03-10",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 68,
+    "occupation": "emekli",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Gül Sokak No: 6",
+      "city": "Konya",
+      "zip_code": "42000"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 1,
+      "internet_avg_speed_mbps": 5,
+      "call_minutes_monthly": 1850,
+      "sms_count_monthly": 250,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "3G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_007",
+    "name": "Zeynep",
+    "surname": "Aksoy",
+    "tc_no": "12345678907",
+    "phone_number": "05009997766",
+    "current_package": "Müthiş 60 GB",
+    "contract_end_date": "2026-06-01",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 31,
+    "occupation": "calisan",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Cumhuriyet Mah. Koru Evleri D3",
+      "city": "İstanbul",
+      "zip_code": "34100"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 52,
+      "internet_avg_speed_mbps": 85,
+      "call_minutes_monthly": 350,
+      "sms_count_monthly": 20,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_008",
+    "name": "Burak",
+    "surname": "Yıldırım",
+    "tc_no": "12345678908",
+    "phone_number": "05559994433",
+    "current_package": "XL Ev Paketi - 500MBPS",
+    "contract_end_date": "2026-06-01",
+    "payment_status": "Beklemede",
+    "service_status": "Aktif",
+    "age": 37,
+    "occupation": "calisan",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Yeni Mah. Fiber Apt. No: 101",
+      "city": "Antalya",
+      "zip_code": "07040"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 450,
+      "internet_avg_speed_mbps": 320,
+      "call_minutes_monthly": 20,
+      "sms_count_monthly": 3,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_009",
+    "name": "Selin",
+    "surname": "Kurt",
+    "tc_no": "12345678909",
+    "phone_number": "05002223344",
+    "current_package": "Süper Seyahat Paketi 20GB",
+    "contract_end_date": "2025-07-30",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 29,
+    "occupation": "serbest",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Yurt Caddesi No: 10",
+      "city": "İzmir",
+      "zip_code": "35200"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 20,
+      "internet_avg_speed_mbps": 20,
+      "call_minutes_monthly": 1000,
+      "sms_count_monthly": 5,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "4G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_010",
+    "name": "Kemal",
+    "surname": "Şahin",
+    "tc_no": "12345678910",
+    "phone_number": "05007775544",
+    "current_package": "Fırsat 10 GB",
+    "contract_end_date": "2026-01-10",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 48,
+    "occupation": "memur",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Çınar Sokak No: 23",
+      "city": "Adana",
+      "zip_code": "01100"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 5,
+      "internet_avg_speed_mbps": 25,
+      "call_minutes_monthly": 1400,
+      "sms_count_monthly": 110,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "3G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_022",
+    "name": "Hüseyin",
+    "surname": "Öztürk",
+    "tc_no": "12345678906",
+    "phone_number": "05441112233",
+    "current_package": "Yaş Dostu Konuşkan",
+    "contract_end_date": "2026-03-10",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 68,
+    "occupation": "emekli",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Gül Sokak No: 6",
+      "city": "Konya",
+      "zip_code": "42000"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 1,
+      "internet_avg_speed_mbps": 5,
+      "call_minutes_monthly": 1850,
+      "sms_count_monthly": 250,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "3G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_011",
+    "name": "Fadime",
+    "surname": "Demirtaş",
+    "tc_no": "24943356750",
+    "phone_number": "0500-846-0987",
+    "current_package": "Müthiş 60 GB",
+    "contract_end_date": "2025-12-20",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 33,
+    "occupation": "calisan",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Yeşil Vadi Caddesi No: 9",
+      "city": "Diyarbakır",
+      "zip_code": "09920"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 42,
+      "internet_avg_speed_mbps": 56,
+      "call_minutes_monthly": 1512,
+      "sms_count_monthly": 124,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "3G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_012",
+    "name": "Yunus",
+    "surname": "İlhan",
+    "tc_no": "13322644858",
+    "phone_number": "0542-362-5825",
+    "current_package": "Çocuk Plus Paket",
+    "contract_end_date": "2025-12-16",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 9,
+    "occupation": "cocuk",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "child",
+    "address": {
+      "street": "Çiftlik Sk. No: 2",
+      "city": "Van",
+      "zip_code": "30418"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 56,
+      "internet_avg_speed_mbps": 24,
+      "call_minutes_monthly": 1184,
+      "sms_count_monthly": 61,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": true,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_013",
+    "name": "Harun",
+    "surname": "Korkmaz",
+    "tc_no": "26626005142",
+    "phone_number": "0503-063-8451",
+    "current_package": "Yaş Dostu Mini",
+    "contract_end_date": "2025-10-23",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 72,
+    "occupation": "emekli",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Deniz Feneri Sk. No: 69",
+      "city": "Balıkesir",
+      "zip_code": "22968"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 35,
+      "internet_avg_speed_mbps": 46,
+      "call_minutes_monthly": 738,
+      "sms_count_monthly": 171,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_014",
+    "name": "Gizem",
+    "surname": "Uysal",
+    "tc_no": "20142172960",
+    "phone_number": "0539-860-0982",
+    "current_package": "Genç Cool 20 GB",
+    "contract_end_date": "2025-09-14",
+    "payment_status": "Gecikmiş",
+    "service_status": "Aktif",
+    "age": 29,
+    "occupation": "ogrenci",
+    "blocked_numbers": [
+      "05054845658"
+    ],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Ormanlık Alan Yanı 3. Durak",
+      "city": "Gaziantep",
+      "zip_code": "51814"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 46,
+      "internet_avg_speed_mbps": 75,
+      "call_minutes_monthly": 1123,
+      "sms_count_monthly": 90,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "4G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_015",
+    "name": "Berk",
+    "surname": "Doğan",
+    "tc_no": "43211154762",
+    "phone_number": "0544-908-4826",
+    "current_package": "Esnafın Yanında 30 GB Kampanyası",
+    "contract_end_date": "2025-11-27",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 45,
+    "occupation": "esnaf",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Sanayi Cd. 27. Blok No: 4",
+      "city": "Kayseri",
+      "zip_code": "38100"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 60,
+      "internet_avg_speed_mbps": 88,
+      "call_minutes_monthly": 1600,
+      "sms_count_monthly": 135,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_016",
+    "name": "Cansu",
+    "surname": "Ertekin",
+    "tc_no": "22100898750",
+    "phone_number": "0506-881-2345",
+    "current_package": "Fırsat 5 GB",
+    "contract_end_date": "2025-10-03",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 38,
+    "occupation": "memur",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Tuna Mah. 8. Cadde No: 88",
+      "city": "Denizli",
+      "zip_code": "20100"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 12,
+      "internet_avg_speed_mbps": 35,
+      "call_minutes_monthly": 450,
+      "sms_count_monthly": 20,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "4G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_017",
+    "name": "Süleyman",
+    "surname": "Yılmaz",
+    "tc_no": "12398364729",
+    "phone_number": "0553-109-4372",
+    "current_package": "Yaş Dostu Mini",
+    "contract_end_date": "2025-12-12",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 60,
+    "occupation": "emekli",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Bayındır Sk. No: 15",
+      "city": "Kütahya",
+      "zip_code": "43100"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 5,
+      "internet_avg_speed_mbps": 8,
+      "call_minutes_monthly": 2200,
+      "sms_count_monthly": 300,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "3G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_018",
+    "name": "Selin",
+    "surname": "Kara",
+    "tc_no": "44532619752",
+    "phone_number": "0501-778-2294",
+    "current_package": "Süper Seyahat Paketi 20GB",
+    "contract_end_date": "2026-01-15",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 31,
+    "occupation": "serbest",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Avrupa Mah. Sok. No: 6",
+      "city": "İstanbul",
+      "zip_code": "34000"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 40,
+      "internet_avg_speed_mbps": 95,
+      "call_minutes_monthly": 950,
+      "sms_count_monthly": 15,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_019",
+    "name": "Ali",
+    "surname": "Erdoğan",
+    "tc_no": "15742836684",
+    "phone_number": "0533-547-2221",
+    "current_package": "Müthiş 60 GB",
+    "contract_end_date": "2025-11-05",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 27,
+    "occupation": "calisan",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Organize Sanayi 4. Bölge",
+      "city": "Adana",
+      "zip_code": "01090"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 70,
+      "internet_avg_speed_mbps": 120,
+      "call_minutes_monthly": 300,
+      "sms_count_monthly": 50,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_020",
+    "name": "Neşe",
+    "surname": "Bozkurt",
+    "tc_no": "32611872942",
+    "phone_number": "0507-663-8842",
+    "current_package": "XL Ev Paketi - 500MBPS",
+    "contract_end_date": "2026-03-09",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 50,
+    "occupation": "diger",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Fiber Blokları No: 88",
+      "city": "Eskişehir",
+      "zip_code": "26020"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 500,
+      "internet_avg_speed_mbps": 410,
+      "call_minutes_monthly": 40,
+      "sms_count_monthly": 2,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_021",
+    "name": "Berkay",
+    "surname": "Bayramoğlu",
+    "tc_no": "13579246801",
+    "phone_number": "0507-112-3344",
+    "current_package": "XL Ev Paketi - 500MBPS",
+    "contract_end_date": "2026-07-03",
+    "payment_status": "Beklemede",
+    "service_status": "Aktif",
+    "age": 19,
+    "occupation": "ogrenci",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Bahçelievler Mah. Gençlik Cad. No: 19",
+      "city": "Ankara",
+      "zip_code": "06490"
+    },
+    "authorized_contacts": [],
+    "usage_history": {
+      "internet_gb_used_monthly": 320,
+      "internet_avg_speed_mbps": 280,
+      "call_minutes_monthly": 15,
+      "sms_count_monthly": 1,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_023",
+    "name": "Alperen",
+    "surname": "Aydın",
+    "tc_no": "12398745610",
+    "phone_number": "0532-764-2290",
+    "current_package": "Bol Bol İzle Uçuran Hız - 200MBPS",
+    "contract_end_date": "2026-07-03",
+    "payment_status": "Beklemede",
+    "service_status": "Aktif",
+    "age": 25,
+    "occupation": "calisan",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": true,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Barbaros Mah. Teknoloji Cad. No: 99",
+      "city": "Ordu",
+      "zip_code": "34746"
+    },
+    "authorized_contacts": [
+      {
+        "name": "Ayşe Aydın",
+        "phone": "0505-888-4411"
+      }
+    ],
+    "usage_history": {
+      "internet_gb_used_monthly": 390,
+      "internet_avg_speed_mbps": 190,
+      "call_minutes_monthly": 10,
+      "sms_count_monthly": 0,
+      "is_data_heavy_user": true,
+      "is_call_heavy_user": false
+    },
+    "bills": [
+      {
+        "bill_id": "B2025-06",
+        "bill_date": "2025-06-28",
+        "amount": "660.00 TL",
+        "due_date": "2025-07-10",
+        "status": "Beklemede",
+        "details": "Haziran ayı Bol Bol İzle Uçuran Hız 200MBPS faturası",
+        "breakdown": {
+          "base": "600.00 TL",
+          "extra_usage": "0.00 TL",
+          "taxes": "60.00 TL"
+        }
+      }
+    ],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": false
+  },
+  {
+    "customer_id": "user_024",
+    "name": "Seyit Kaan",
+    "surname": "Güneş",
+    "tc_no": "21398765432",
+    "phone_number": "0543-667-8899",
+    "current_package": "Süper Seyahat Paketi 20GB",
+    "contract_end_date": "2026-07-03",
+    "payment_status": "Odendi",
+    "service_status": "Aktif",
+    "age": 20,
+    "occupation": "ogrenci",
+    "blocked_numbers": [],
+    "status": "aktif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": false,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Gazi Cad. No: 10",
+      "city": "Çorum",
+      "zip_code": "19100"
+    },
+    "authorized_contacts": [
+      {
+        "name": "Elif Güneş",
+        "phone": "0506-212-3344"
+      }
+    ],
+    "usage_history": {
+      "internet_gb_used_monthly": 18,
+      "internet_avg_speed_mbps": 25,
+      "call_minutes_monthly": 320,
+      "sms_count_monthly": 8,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": false
+    },
+    "bills": [
+      {
+        "bill_id": "B2025-06",
+        "bill_date": "2025-06-25",
+        "amount": "780.00 TL",
+        "due_date": "2025-07-10",
+        "status": "Odendi",
+        "details": "Süper Seyahat 20GB yurt dışı paketi fatura bedeli",
+        "breakdown": {
+          "base": "780.00 TL",
+          "extra_usage": "20.00 TL",
+          "taxes": "20.00 TL"
+        }
+      }
+    ],
+    "child_mode_enabled": false,
+    "network_mode": "5G",
+    "esim_active": true
+  },
+  {
+    "customer_id": "user_025",
+    "name": "Hasna Sena",
+    "surname": "Kaymak",
+    "tc_no": "20334567789",
+    "phone_number": "0504-898-7788",
+    "current_package": "Yaş Dostu Konuşkan",
+    "contract_end_date": "2026-07-03",
+    "payment_status": "Odendi",
+    "service_status": "İptal Edildi",
+    "age": 56,
+    "occupation": "emekli",
+    "blocked_numbers": [],
+    "status": "pasif",
+    "has_fiber_infrastructure": false,
+    "roaming_restricted": true,
+    "internet_profile": "normal",
+    "address": {
+      "street": "Liman Caddesi No: 55",
+      "city": "Çanakkale",
+      "zip_code": "17100"
+    },
+    "authorized_contacts": [
+      {
+        "name": " Kaymak",
+        "phone": "0530-660-4455"
+      }
+    ],
+    "usage_history": {
+      "internet_gb_used_monthly": 32,
+      "internet_avg_speed_mbps": 18,
+      "call_minutes_monthly": 1900,
+      "sms_count_monthly": 150,
+      "is_data_heavy_user": false,
+      "is_call_heavy_user": true
+    },
+    "bills": [
+      {
+        "bill_id": "B2025-06-HSK",
+        "bill_date": "2025-06-20",
+        "amount": "285.00 TL",
+        "due_date": "2025-07-10",
+        "status": "Odendi",
+        "details": "Yaş Dostu Konuşkan Haziran faturası",
+        "breakdown": {
+          "base": "250.00 TL",
+          "extra_usage": "10.00 TL",
+          "taxes": "25.00 TL"
+        }
+      }
+    ],
+    "child_mode_enabled": true,
+    "network_mode": "4G",
+    "esim_active": true
+  }
+]
