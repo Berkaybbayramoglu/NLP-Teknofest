@@ -1,29 +1,29 @@
-TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması Projesi
-Bu depo, TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması'na katılan ekibimizin "Üretken Yapay Zeka Destekli Otonom Çağrı Merkezi Senaryoları" kategorisi için geliştirdiği projeyi içermektedir. Projemiz, telekomünikasyon sektöründeki karmaşık müşteri taleplerini anlayan, işleyen ve çözüme ulaştıran otonom bir yapay zeka sistemi geliştirmeyi hedeflemektedir.
+✨ TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması Projesi ✨
+🚀 Bu depo, TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması'na katılan ekibimizin "Üretken Yapay Zeka Destekli Otonom Çağrı Merkezi Senaryoları" kategorisi için geliştirdiği çığır açan projeyi sunmaktadır. Amacımız, telekomünikasyon sektöründeki karmaşık müşteri taleplerini anlayan, işleyen ve çözüme ulaştıran tamamen otonom bir yapay zeka sistemi geliştirmektir.
 
-Proje Amacı ve Kapsamı
-Günümüz telekomünikasyon sektöründe müşteri memnuniyetini artırmak amacıyla, geleneksel statik çağrı merkezi akışlarının ötesine geçen, dinamik ve insansı yeteneklere sahip bir yapay zeka ajanı geliştirmeyi amaçlıyoruz. Projemiz, Agentic Framework'ler ve Büyük Dil Modelleri (LLM) kullanarak aşağıdaki temel beklentileri karşılamaktadır:
+🎯 Proje Amacı ve Kapsamı
+Günümüz telekomünikasyon sektöründe müşteri memnuniyetini en üst düzeye çıkarmak için, geleneksel statik çağrı merkezi akışlarının ötesine geçen, dinamik ve insansı yeteneklere sahip bir yapay zeka ajanı tasarlıyoruz. Projemiz, Agentic Framework'ler ve Büyük Dil Modelleri (LLM) kullanarak aşağıdaki temel beklentileri titizlikle karşılamaktadır:
 
-Dinamik Araç Seçimi ve Kullanımı: Ajan, konuşma bağlamına göre gerekli "aracı" (fonksiyonu, API çağrısını) dinamik olarak kendisi seçer ve kullanır. Önceden tanımlanmış if/else ağaçları yerine, LLM'in düşünme yeteneği ile ihtiyacı belirler.
+Dinamik Araç Seçimi ve Kullanımı: Ajanımız, konuşma bağlamına göre hangi "aracı" (fonksiyonu, API çağrısını) kullanacağına akıllıca ve dinamik olarak kendisi karar verir. Önceden tanımlanmış if/else ağaçları yerine, LLM'in derin düşünme yeteneği ile ihtiyacı belirler.
 
-Bağlam Değişimi ve Kesinti Yönetimi: Müşteri bir senaryo sırasında farklı bir konuya geçtiğinde veya sohbet kesildiğinde, ajan bu durumu anlar, yönetir ve diyaloğu uygun şekilde sürdürür.
+Bağlam Değişimi ve Kesinti Yönetimi: Müşteri bir senaryo sırasında aniden farklı bir konuya geçtiğinde veya sohbet kesintiye uğradığında, ajan bu durumu anlar, mevcut durumu ustaca yönetir ve diyaloğu sorunsuz bir şekilde sürdürür.
 
-Çok Adımlı Karar Zincirleri: Ajan, tek bir API çağrısıyla çözülemeyen, birden fazla adımdan oluşan karmaşık senaryoları (örn: getUserInfo sonucuna göre getAvailablePackages çağırma) yönetir.
+Çok Adımlı Karar Zincirleri: Ajan, tek bir API çağrısıyla çözülemeyen, birden fazla adımdan oluşan karmaşık senaryoları (örn: getUserInfo sonucuna göre getAvailablePackages çağırma) başarıyla yönetir, zincirleme kararlar alır.
 
-Harici Sistem Simülasyonu (Mock Fonksiyonlar): Gerçekçi bir çağrı merkezi deneyimi için müşteri veritabanı, faturalama sistemi, paket kataloğu gibi "arka uç sistemlerle" etkileşimi simüle eden kendi "mock" fonksiyonlarımızı geliştirdik ve ajanın araçları olarak entegre ettik.
+Harici Sistem Simülasyonu (Mock Fonksiyonlar): Gerçekçi bir çağrı merkezi deneyimi sunmak için müşteri veritabanı, faturalama sistemi, paket kataloğu gibi "arka uç sistemlerle" etkileşimi simüle eden kendi "mock" fonksiyonlarımızı geliştirdik ve ajanın araçları olarak sorunsuz bir şekilde entegre ettik.
 
-Durum Yönetimi ve Bellek: Ajan, sohbet geçmişini (bellek) etkin kullanarak daha bilinçli ve bağlama uygun yanıtlar üretir. Tüm etkileşimler uygun bir mimari ile loglanır ve monitör edilebilir.
+Durum Yönetimi ve Bellek: Ajan, sohbet geçmişini (bellek) etkin bir şekilde kullanarak daha bilinçli ve bağlama uygun yanıtlar üretir. Tüm etkileşimler uygun bir mimari ile loglanır ve gerçek zamanlı olarak monitör edilebilir.
 
-Hata İşleme ve Kullanıcıya Bilgi Verme: Mock fonksiyonlardan gelebilecek hataları anlar, nazikçe kullanıcıya aktarır ve çözüm önerileri sunar. Ham hata mesajları kullanıcıya iletilmez.
+Hata İşleme ve Kullanıcıya Bilgi Verme: Mock fonksiyonlardan gelebilecek hataları anlar, nazikçe kullanıcıya aktarır ve olası çözüm önerileri sunar. Ham hata mesajları asla kullanıcıya iletilmez.
 
-Minimum Statik Yapı: Çözüm, önceden kodlanmış, koşullu dallanma yapıları yerine ajanın dinamik akıl yürütme ve araç çağırma yeteneklerine dayanır.
+Minimum Statik Yapı: Çözümümüz, önceden kodlanmış, koşullu dallanma yapıları yerine ajanın dinamik akıl yürütme ve araç çağırma yeteneklerine dayanır. Senaryo akışları, ajanın çalışma zamanındaki kararlarına bırakılır.
 
-Açık Kaynak Kod Yaklaşımı: Projemizdeki tüm kodlar açık kaynak kod tabanlı teknolojiler kullanılarak geliştirilmiştir ve Apache Lisansı 2.0 altında lisanslanmıştır.
+Açık Kaynak Kod Yaklaşımı: Projemizdeki tüm kodlar açık kaynak kod tabanlı teknolojiler kullanılarak geliştirilmiştir ve Apache Lisansı 2.0 altında lisanslanmıştır. Şeffaflığa ve topluluğa katkıya inanıyoruz!
 
-Örnek Senaryo: Paket Değişikliği Talebi
-Projemiz, telekom çağrı merkezlerinde sıkça karşılaşılan "Paket Değişikliği Talebi" gibi senaryoları uçtan uca otomatize etmeyi başarmaktadır. Bu senaryo, müşteriyi tanımlama, mevcut paket durumunu kontrol etme, uygun paketleri listeleme, müşterinin seçimini anlama ve paket değişikliği işlemini başlatma gibi aşamaları içermektedir.
+📞 Örnek Senaryo: Paket Değişikliği Talebi
+Projemiz, telekom çağrı merkezlerinde sıkça karşılaşılan "Paket Değişikliği Talebi" gibi senaryoları uçtan uca otomatize etmeyi başarmaktadır. Bu senaryo, müşteriyi tanımlama, mevcut paket durumunu kontrol etme, uygun paketleri listeleme, müşterinin seçimini anlama ve paket değişikliği işlemini başlatma gibi kritik aşamaları içermektedir.
 
-Teslim Edilenler
+📦 Teslim Edilenler
 Çalışan Proje Kodu: Agent, mock fonksiyonlar, arayüz kodu ve benchmark kodu dahil tüm kaynak kodları.
 
 Kurulum Talimatları: Kodun çalıştırılması için gerekli tüm adımlar (gereksinimler, çevre değişkenleri vb.) net bir şekilde belirtilmiştir.
