@@ -23,6 +23,7 @@
       "city": "Eskişehir",
       "zip_code": "26000"
     },
+    "appointments": [],
     "authorized_contacts": [
       {
         "name": "Zeynep Koç",
@@ -45,14 +46,14 @@
       {
         "bill_id": "B999-06",
         "bill_date": "2025-06-20",
-        "amount": "320.00 TL",
+        "amount": 320.0,
         "due_date": "2025-07-10",
         "status": "Gecikmiş",
         "details": "Haziran ayı Genç Cool 25 GB faturası",
         "breakdown": {
-          "base": "280.00 TL",
-          "extra_usage": "20.00 TL",
-          "taxes": "20.00 TL"
+          "base": 280.0,
+          "extra_usage": 20.0,
+          "taxes": 20.0
         }
       }
     ],
@@ -61,7 +62,7 @@
     "esim_active": true
   },
   {
-    "customer_id": "user_002",
+    "customer_id": "12345678901",
     "name": "Ahmet",
     "surname": "Yılmaz",
     "tc_no": "12345678901",
@@ -69,11 +70,14 @@
     "current_package": "Esnafın Yanında 30 GB Kampanyası",
     "contract_end_date": "2026-07-01",
     "payment_status": "Gecikmiş",
-    "service_status": "Aktif",
+    "service_status": "Askıya Alındı",
     "age": 35,
     "occupation": "esnaf",
-    "blocked_numbers": [],
-    "status": "aktif",
+    "blocked_numbers": [
+      "05468982512"
+    ],
+    "appointments": [],
+    "status": "pasif",
     "has_fiber_infrastructure": true,
     "roaming_restricted": false,
     "internet_profile": "normal",
@@ -100,20 +104,20 @@
       {
         "bill_id": "B2025-06-AHY",
         "bill_date": "2025-06-15",
-        "amount": "340.00 TL",
+        "amount": 340.0,
         "due_date": "2025-07-05",
         "status": "Gecikmiş",
         "details": "Haziran ayı Esnaf 30 GB faturası",
         "breakdown": {
-          "base": "290.00 TL",
-          "extra_usage": "20.00 TL",
-          "taxes": "30.00 TL"
+          "base": 290.0,
+          "extra_usage": 20.0,
+          "taxes": 30.0
         }
       }
     ],
-    "child_mode_enabled": false,
+    "child_mode_enabled": true,
     "network_mode": "5G",
-    "esim_active": true
+    "esim_active": false
   },
   {
     "customer_id": "user_003",
@@ -132,6 +136,7 @@
     "has_fiber_infrastructure": false,
     "roaming_restricted": false,
     "internet_profile": "normal",
+    "appointments": [],
     "address": {
       "street": "Atatürk Cad. No: 11",
       "city": "İzmir",
@@ -165,6 +170,17 @@
     "occupation": "esnaf",
     "blocked_numbers": [],
     "status": "aktif",
+    "appointments": [
+      {
+        "appointment_id": "APPT-1235",
+        "issue": "wifi çekmiyor",
+        "date": "2025-07-20",
+        "time": "14:00",
+        "status": "Planlandı",
+        "created_at": "2025-07-05 13:45",
+        "active": true
+      }
+    ],
     "has_fiber_infrastructure": true,
     "roaming_restricted": false,
     "internet_profile": "normal",
@@ -192,7 +208,7 @@
     "name": "Ayşe",
     "surname": "Demir",
     "tc_no": "12345678905",
-    "phone_number": "05009998877",
+    "phone_number": "05013493482",
     "current_package": "Çocuk Eğitim Paketi",
     "contract_end_date": "2026-01-01",
     "payment_status": "Odendi",
@@ -202,7 +218,18 @@
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
-    "roaming_restricted": true,
+    "roaming_restricted": false,
+    "appointments": [
+      {
+        "appointment_id": "destek-17",
+        "issue": "Hattım çekmiyor",
+        "date": "2025-10-01",
+        "time": "13:00",
+        "status": "Planlandı",
+        "created_at": "2025-07-05 19:52:03",
+        "active": true
+      }
+    ],
     "internet_profile": "child",
     "address": {
       "street": "Yıldız Mah. 12. Sokak No: 9",
@@ -213,6 +240,10 @@
       {
         "name": "Mehmet Demir",
         "phone": "05337776655"
+      },
+      {
+        "name": "Melike Demir",
+        "phone": "05468982500"
       }
     ],
     "usage_history": {
@@ -224,8 +255,8 @@
       "is_call_heavy_user": false
     },
     "bills": [],
-    "child_mode_enabled": true,
-    "network_mode": "4G",
+    "child_mode_enabled": false,
+    "network_mode": "5G",
     "esim_active": false
   },
   {
@@ -239,7 +270,7 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 68,
-    "occupation": "emekli",
+    "occupation": "yaslı",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
@@ -250,6 +281,7 @@
       "city": "Konya",
       "zip_code": "42000"
     },
+    "appointments": [],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 1,
@@ -275,7 +307,7 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 31,
-    "occupation": "calisan",
+    "occupation": "genel",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": true,
@@ -286,6 +318,7 @@
       "city": "İstanbul",
       "zip_code": "34100"
     },
+    "appointments": [],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 52,
@@ -311,7 +344,7 @@
     "payment_status": "Beklemede",
     "service_status": "Aktif",
     "age": 37,
-    "occupation": "calisan",
+    "occupation": "genel",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": true,
@@ -319,9 +352,20 @@
     "internet_profile": "normal",
     "address": {
       "street": "Yeni Mah. Fiber Apt. No: 101",
-      "city": "Antalya",
+      "city": "İstanbul",
       "zip_code": "07040"
     },
+    "appointments": [
+      {
+        "appointment_id": "APPT-1236",
+        "issue": "5g ye geçmek istiyorum fiber altyapım var",
+        "date": "2025-08-10",
+        "time": "14:00",
+        "status": "Planlandı",
+        "created_at": "2025-07-05 13:40",
+        "active": true
+      }
+    ],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 450,
@@ -333,7 +377,7 @@
     },
     "bills": [],
     "child_mode_enabled": false,
-    "network_mode": "5G",
+    "network_mode": "4G",
     "esim_active": true
   },
   {
@@ -347,8 +391,9 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 29,
-    "occupation": "serbest",
+    "occupation": "genel",
     "blocked_numbers": [],
+    "appointments": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
     "roaming_restricted": false,
@@ -383,8 +428,9 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 48,
-    "occupation": "memur",
+    "occupation": "genel",
     "blocked_numbers": [],
+    "appointments": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
@@ -419,9 +465,10 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 68,
-    "occupation": "emekli",
+    "occupation": "yaslı",
     "blocked_numbers": [],
     "status": "aktif",
+    "appointments": [],
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
     "internet_profile": "normal",
@@ -455,8 +502,9 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 33,
-    "occupation": "calisan",
+    "occupation": "genel",
     "blocked_numbers": [],
+    "appointments": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
@@ -497,6 +545,7 @@
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
     "internet_profile": "child",
+    "appointments": [],
     "address": {
       "street": "Çiftlik Sk. No: 2",
       "city": "Van",
@@ -527,7 +576,7 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 72,
-    "occupation": "emekli",
+    "occupation": "yaslı",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
@@ -538,6 +587,7 @@
       "city": "Balıkesir",
       "zip_code": "22968"
     },
+    "appointments": [],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 35,
@@ -561,13 +611,11 @@
     "current_package": "Genç Cool 20 GB",
     "contract_end_date": "2025-09-14",
     "payment_status": "Gecikmiş",
-    "service_status": "Aktif",
+    "service_status": "Askıya Alındı",
     "age": 29,
     "occupation": "ogrenci",
-    "blocked_numbers": [
-      "05054845658"
-    ],
-    "status": "aktif",
+    "blocked_numbers": [],
+    "status": "pasif",
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
     "internet_profile": "normal",
@@ -576,6 +624,7 @@
       "city": "Gaziantep",
       "zip_code": "51814"
     },
+    "appointments": [],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 46,
@@ -585,8 +634,22 @@
       "is_data_heavy_user": true,
       "is_call_heavy_user": false
     },
-    "bills": [],
-    "child_mode_enabled": false,
+    "bills": [
+      {
+        "bill_id": "B2025-13",
+        "bill_date": "2025-06-21",
+        "amount": 300.0,
+        "due_date": "2025-07-01",
+        "status": "Gecikmiş",
+        "details": "Genç Cool 20 GB",
+        "breakdown": {
+          "base": 300.0,
+          "extra_usage": 0.0,
+          "taxes": 0.0
+        }
+      }
+    ],
+    "child_mode_enabled": true,
     "network_mode": "4G",
     "esim_active": false
   },
@@ -604,8 +667,9 @@
     "occupation": "esnaf",
     "blocked_numbers": [],
     "status": "aktif",
+    "appointments": [],
     "has_fiber_infrastructure": true,
-    "roaming_restricted": true,
+    "roaming_restricted": false,
     "internet_profile": "normal",
     "address": {
       "street": "Sanayi Cd. 27. Blok No: 4",
@@ -637,7 +701,7 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 38,
-    "occupation": "memur",
+    "occupation": "genel",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
@@ -648,6 +712,7 @@
       "city": "Denizli",
       "zip_code": "20100"
     },
+    "appointments": [],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 12,
@@ -673,9 +738,10 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 60,
-    "occupation": "emekli",
+    "occupation": "yaslı",
     "blocked_numbers": [],
     "status": "aktif",
+    "appointments": [],
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
     "internet_profile": "normal",
@@ -693,7 +759,21 @@
       "is_data_heavy_user": false,
       "is_call_heavy_user": true
     },
-    "bills": [],
+    "bills": [
+      {
+        "bill_id": "B2025-12",
+        "bill_date": "2025-07-01",
+        "amount": 90.0,
+        "due_date": "2025-07-05",
+        "status": "Ödendi",
+        "details": "Yaş Dostu Mini",
+        "breakdown": {
+          "base": 90.0,
+          "extra_usage": 0.0,
+          "taxes": 0.0
+        }
+      }
+    ],
     "child_mode_enabled": false,
     "network_mode": "3G",
     "esim_active": false
@@ -709,7 +789,8 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 31,
-    "occupation": "serbest",
+    "occupation": "genel",
+    "appointments": [],
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": false,
@@ -745,7 +826,7 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 27,
-    "occupation": "calisan",
+    "occupation": "genel",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": true,
@@ -756,6 +837,7 @@
       "city": "Adana",
       "zip_code": "01090"
     },
+    "appointments": [],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 70,
@@ -765,7 +847,21 @@
       "is_data_heavy_user": true,
       "is_call_heavy_user": false
     },
-    "bills": [],
+    "bills": [
+      {
+        "bill_id": "B2025-11",
+        "bill_date": "2025-08-04",
+        "amount": 480.0,
+        "due_date": "2025-08-10",
+        "status": "Beklemede",
+        "details": "Müthiş 60 GB",
+        "breakdown": {
+          "base": 480.0,
+          "extra_usage": 0.0,
+          "taxes": 0.0
+        }
+      }
+    ],
     "child_mode_enabled": false,
     "network_mode": "5G",
     "esim_active": false
@@ -781,7 +877,7 @@
     "payment_status": "Odendi",
     "service_status": "Aktif",
     "age": 50,
-    "occupation": "diger",
+    "occupation": "ev interneti",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": true,
@@ -792,6 +888,17 @@
       "city": "Eskişehir",
       "zip_code": "26020"
     },
+    "appointments": [
+      {
+        "appointment_id": "APPT-1244",
+        "issue": "yavaş internet",
+        "date": "2025-06-10",
+        "time": "14:00",
+        "status": "pasif",
+        "created_at": "2025-07-05 13:40",
+        "active": false
+      }
+    ],
     "authorized_contacts": [],
     "usage_history": {
       "internet_gb_used_monthly": 500,
@@ -801,7 +908,21 @@
       "is_data_heavy_user": true,
       "is_call_heavy_user": false
     },
-    "bills": [],
+    "bills": [
+      {
+        "bill_id": "B2025-08",
+        "bill_date": "2025-07-25",
+        "amount": 799.0,
+        "due_date": "2025-07-30",
+        "status": "Beklemede",
+        "details": "XL Ev Paketi - 500MBPS",
+        "breakdown": {
+          "base": 729.0,
+          "extra_usage": 0.0,
+          "taxes": 70.0
+        }
+      }
+    ],
     "child_mode_enabled": false,
     "network_mode": "5G",
     "esim_active": false
@@ -817,12 +938,13 @@
     "payment_status": "Beklemede",
     "service_status": "Aktif",
     "age": 19,
-    "occupation": "ogrenci",
+    "occupation": "ev interneti",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": true,
     "roaming_restricted": false,
     "internet_profile": "normal",
+    "appointments": [],
     "address": {
       "street": "Bahçelievler Mah. Gençlik Cad. No: 19",
       "city": "Ankara",
@@ -837,7 +959,21 @@
       "is_data_heavy_user": true,
       "is_call_heavy_user": false
     },
-    "bills": [],
+    "bills": [
+      {
+        "bill_id": "B2025-07",
+        "bill_date": "2025-07-28",
+        "amount": 799.0,
+        "due_date": "2025-07-10",
+        "status": "Beklemede",
+        "details": "XL Ev Paketi - 500MBPS",
+        "breakdown": {
+          "base": 729.0,
+          "extra_usage": 0.0,
+          "taxes": 70.0
+        }
+      }
+    ],
     "child_mode_enabled": false,
     "network_mode": "5G",
     "esim_active": false
@@ -853,21 +989,51 @@
     "payment_status": "Beklemede",
     "service_status": "Aktif",
     "age": 25,
-    "occupation": "calisan",
+    "occupation": "ev interneti",
     "blocked_numbers": [],
     "status": "aktif",
     "has_fiber_infrastructure": true,
     "roaming_restricted": false,
     "internet_profile": "normal",
     "address": {
-      "street": "Barbaros Mah. Teknoloji Cad. No: 99",
-      "city": "Ordu",
-      "zip_code": "34746"
+      "street": "faruk mahallesi teknik sokak no:74",
+      "city": "ordu",
+      "zip_code": "25845"
     },
+    "appointments": [
+      {
+        "appointment_id": "APPT-1238",
+        "issue": "hat gidiyo sürekli",
+        "date": "2025-10-10",
+        "time": "14:00",
+        "status": "Planlandı",
+        "created_at": "2025-07-04 13:40",
+        "active": true
+      },
+      {
+        "type": "İnternet Nakil",
+        "requested_at": "2025-07-05 18:58:12",
+        "status": "Planlandı",
+        "old_address": {
+          "street": "Barbaros Mah. Teknoloji Cad. No: 99",
+          "city": "Ordu",
+          "zip_code": "34746"
+        },
+        "new_address": {
+          "street": "faruk mahallesi teknik sokak no:74",
+          "city": "ordu",
+          "zip_code": "25845"
+        }
+      }
+    ],
     "authorized_contacts": [
       {
         "name": "Ayşe Aydın",
         "phone": "0505-888-4411"
+      },
+      {
+        "name": "Veysel Aydın",
+        "phone": "05264585123"
       }
     ],
     "usage_history": {
@@ -882,14 +1048,14 @@
       {
         "bill_id": "B2025-06",
         "bill_date": "2025-06-28",
-        "amount": "660.00 TL",
+        "amount": 660.0,
         "due_date": "2025-07-10",
         "status": "Beklemede",
         "details": "Haziran ayı Bol Bol İzle Uçuran Hız 200MBPS faturası",
         "breakdown": {
-          "base": "600.00 TL",
-          "extra_usage": "0.00 TL",
-          "taxes": "60.00 TL"
+          "base": 600.0,
+          "extra_usage": 0.0,
+          "taxes": 60.0
         }
       }
     ],
@@ -914,6 +1080,7 @@
     "has_fiber_infrastructure": false,
     "roaming_restricted": false,
     "internet_profile": "normal",
+    "appointments": [],
     "address": {
       "street": "Gazi Cad. No: 10",
       "city": "Çorum",
@@ -937,14 +1104,14 @@
       {
         "bill_id": "B2025-06",
         "bill_date": "2025-06-25",
-        "amount": "780.00 TL",
+        "amount": 780.0,
         "due_date": "2025-07-10",
         "status": "Odendi",
         "details": "Süper Seyahat 20GB yurt dışı paketi fatura bedeli",
         "breakdown": {
-          "base": "780.00 TL",
-          "extra_usage": "20.00 TL",
-          "taxes": "20.00 TL"
+          "base": 780.0,
+          "extra_usage": 20.0,
+          "taxes": 20.0
         }
       }
     ],
@@ -957,15 +1124,17 @@
     "name": "Hasna Sena",
     "surname": "Kaymak",
     "tc_no": "20334567789",
-    "phone_number": "0504-898-7788",
-    "current_package": "Yaş Dostu Konuşkan",
+    "phone_number": "05807100280",
+    "current_package": "Yaş Dostu Mini",
     "contract_end_date": "2026-07-03",
     "payment_status": "Odendi",
-    "service_status": "İptal Edildi",
+    "service_status": "Aktif",
     "age": 56,
-    "occupation": "emekli",
-    "blocked_numbers": [],
-    "status": "pasif",
+    "occupation": "yaslı",
+    "blocked_numbers": [
+      "05268956354"
+    ],
+    "status": "aktif",
     "has_fiber_infrastructure": false,
     "roaming_restricted": true,
     "internet_profile": "normal",
@@ -974,9 +1143,20 @@
       "city": "Çanakkale",
       "zip_code": "17100"
     },
+    "appointments": [
+      {
+        "appointment_id": "destek-30",
+        "issue": "Hattım çekmiyor",
+        "date": "2025-07-07",
+        "time": "12:00",
+        "status": "Planlandı",
+        "created_at": "2025-07-05 15:06:38",
+        "active": true
+      }
+    ],
     "authorized_contacts": [
       {
-        "name": " Kaymak",
+        "name": "Fatma Kaymak",
         "phone": "0530-660-4455"
       }
     ],
@@ -992,14 +1172,14 @@
       {
         "bill_id": "B2025-06-HSK",
         "bill_date": "2025-06-20",
-        "amount": "285.00 TL",
+        "amount": 285.0,
         "due_date": "2025-07-10",
-        "status": "Odendi",
+        "status": "Beklemede",
         "details": "Yaş Dostu Konuşkan Haziran faturası",
         "breakdown": {
-          "base": "250.00 TL",
-          "extra_usage": "10.00 TL",
-          "taxes": "25.00 TL"
+          "base": 250.0,
+          "extra_usage": 10.0,
+          "taxes": 25.0
         }
       }
     ],
