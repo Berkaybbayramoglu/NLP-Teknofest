@@ -9,7 +9,8 @@
     "contract_duration_months": 12,
     "data_limit_gb": 5,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_002",
@@ -21,7 +22,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 10,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_003",
@@ -33,7 +36,8 @@
     "contract_duration_months": 12,
     "data_limit_gb": 20,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_004",
@@ -45,7 +49,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 40,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_005",
@@ -57,7 +63,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 60,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_ESNAF_001",
@@ -69,7 +77,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 10,
     "voice_limit_minutes": 3000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["esnaf"]
   },
   {
     "id": "PKG_TRC_ESNAF_002",
@@ -81,7 +91,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 20,
     "voice_limit_minutes": 3000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["esnaf"]
   },
   {
     "id": "PKG_TRC_ESNAF_003",
@@ -93,7 +105,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 30,
     "voice_limit_minutes": 3000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["esnaf"]
   },
   {
     "id": "PKG_TRC_ESNAF_004",
@@ -105,7 +119,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 50,
     "voice_limit_minutes": 3000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["esnaf"]
   },
   {
     "id": "PKG_TRC_GNC_001",
@@ -117,7 +133,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 10,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["ogrenci"]
   },
   {
     "id": "PKG_TRC_GNC_002",
@@ -129,7 +147,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 20,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["ogrenci"]
   },
   {
     "id": "PKG_TRC_GNC_003",
@@ -141,7 +161,8 @@
     "contract_duration_months": 12,
     "data_limit_gb": 30,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    "allowed_groups": ["ogrenci"]
   },
   {
     "id": "PKG_TRC_GNC_004",
@@ -153,7 +174,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 60,
     "voice_limit_minutes": 2000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["ogrenci"]
   },
   {
     "id": "PKG_TRC_GNC_005",
@@ -165,7 +188,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 90,
     "voice_limit_minutes": 2000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["ogrenci"]
   },
   {
     "id": "PKG_TR_001",
@@ -177,7 +202,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 5,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TR_002",
@@ -189,7 +216,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 10,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_YFAV_003",
@@ -201,7 +230,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 20,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TR_004",
@@ -213,7 +244,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 25,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_YFAV_005",
@@ -225,7 +258,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 40,
     "voice_limit_minutes": 2000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_YFAV_006",
@@ -237,7 +272,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 60,
     "voice_limit_minutes": 2000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   },
   {
     "id": "PKG_TRC_KIDS_001",
@@ -249,7 +286,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 2,
     "voice_limit_minutes": 500,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["cocuk"]
   },
   {
     "id": "PKG_TRC_KIDS_002",
@@ -261,7 +300,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 7,   
     "voice_limit_minutes": 750,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["cocuk"]
   },
   {
     "id": "PKG_TRC_KIDS_003",
@@ -273,7 +314,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 10,  
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["cocuk"]
   },
   {
     "id": "PKG_TRC_KIDS_004",
@@ -285,7 +328,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 6,
     "voice_limit_minutes": 750,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["cocuk"]
   },
   {
     "id": "PKG_TRC_OLD_001",
@@ -297,7 +342,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 1,
     "voice_limit_minutes": 2000,
-    "sms_limit": 500
+    "sms_limit": 500,
+    
+    "allowed_groups": ["yaslı"]
   },
   {
     "id": "PKG_TRC_OLD_002",
@@ -309,7 +356,9 @@
     "contract_duration_months": 12,
     "data_limit_gb": 2,
     "voice_limit_minutes": 5000,
-    "sms_limit": 1000
+    "sms_limit": 1000,
+    
+    "allowed_groups": ["yaslı"]
   },
   {
     "id": "PKG_TRC_OLD_003",
@@ -323,7 +372,9 @@
     "voice_limit_minutes": -1,  
 
     "_comment": " limitsiz demek -1",
-    "sms_limit": 2000
+    "sms_limit": 2000,
+    
+    "allowed_groups": ["yaslı"]
   },
   {
     "id": "PKG_TRC_OLD_004",
@@ -337,7 +388,9 @@
     "voice_limit_minutes": -1,  
 
     "_comment": " limitsiz demek -1",
-    "sms_limit": 1000
+    "sms_limit": 1000,
+    
+    "allowed_groups": ["yaslı"]
   },
   {
     "id": "PKG_HOME_001",
@@ -351,7 +404,9 @@
     "_comment": " limitsiz demek -1",
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": false
+    "required_fiber": false,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_002",
@@ -364,7 +419,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": false
+    "required_fiber": false,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_003",
@@ -377,7 +434,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": true
+    "required_fiber": true,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_004",
@@ -390,7 +449,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": true
+    "required_fiber": true,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_005",
@@ -403,7 +464,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": true
+    "required_fiber": true,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_006",
@@ -416,7 +479,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": true
+    "required_fiber": true,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_007",
@@ -429,7 +494,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": false
+    "required_fiber": false,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_008",
@@ -442,7 +509,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": true
+    "required_fiber": true,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_009",
@@ -455,7 +524,9 @@
     "data_limit_gb": -1,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": false
+    "required_fiber": false,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_HOME_010",
@@ -468,7 +539,9 @@
     "data_limit_gb": 500,
     "voice_limit_minutes": null,
     "sms_limit": null,
-    "required_fiber": true
+    "required_fiber": true,
+    
+    "allowed_groups": ["ev interneti"]
   },
   {
     "id": "PKG_TRAVEL_001",
@@ -480,6 +553,8 @@
     "contract_duration_months": 1,
     "data_limit_gb": 20,
     "voice_limit_minutes": 1000,
-    "sms_limit": null
+    "sms_limit": null,
+    
+    "allowed_groups": ["genel"]
   }
 ]
