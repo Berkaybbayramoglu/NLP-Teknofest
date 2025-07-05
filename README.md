@@ -1,5 +1,7 @@
 ✨ TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması Projesi ✨
 
+assets/LangNet-AU.jpeg
+
 🚀 Bu depo, TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması'na katılan ekibimizin "Üretken Yapay Zeka Destekli Otonom Çağrı Merkezi Senaryoları" kategorisi için geliştirdiği çığır açan projeyi sunmaktadır. Amacımız, telekomünikasyon sektöründeki karmaşık müşteri taleplerini anlayan, işleyen ve çözüme ulaştıran tamamen otonom bir yapay zeka sistemi geliştirmektir.
 
 🎯 Proje Amacı ve Kapsamı
