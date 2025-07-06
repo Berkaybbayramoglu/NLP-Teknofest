@@ -1,12 +1,7 @@
 ✨ TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması Projesi ✨
-
-![LangNet-AU.jpeg](./assets/LangNet-AU.jpeg)
-
-
 🚀 Bu depo, TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması'na katılan ekibimizin "Üretken Yapay Zeka Destekli Otonom Çağrı Merkezi Senaryoları" kategorisi için geliştirdiği çığır açan projeyi sunmaktadır. Amacımız, telekomünikasyon sektöründeki karmaşık müşteri taleplerini anlayan, işleyen ve çözüme ulaştıran tamamen otonom bir yapay zeka sistemi geliştirmektir.
 
 🎯 Proje Amacı ve Kapsamı
-
 Günümüz telekomünikasyon sektöründe müşteri memnuniyetini en üst düzeye çıkarmak için, geleneksel statik çağrı merkezi akışlarının ötesine geçen, dinamik ve insansı yeteneklere sahip bir yapay zeka ajanı tasarlıyoruz. Projemiz, Agentic Framework'ler ve Büyük Dil Modelleri (LLM) kullanarak aşağıdaki temel beklentileri titizlikle karşılamaktadır:
 
 Dinamik Araç Seçimi ve Kullanımı: Ajanımız, konuşma bağlamına göre hangi "aracı" (fonksiyonu, API çağrısını) kullanacağına akıllıca ve dinamik olarak kendisi karar verir. Önceden tanımlanmış if/else ağaçları yerine, LLM'in derin düşünme yeteneği ile ihtiyacı belirler.
@@ -26,14 +21,20 @@ Minimum Statik Yapı: Çözümümüz, önceden kodlanmış, koşullu dallanma ya
 Açık Kaynak Kod Yaklaşımı: Projemizdeki tüm kodlar açık kaynak kod tabanlı teknolojiler kullanılarak geliştirilmiştir ve Apache Lisansı 2.0 altında lisanslanmıştır. Şeffaflığa ve topluluğa katkıya inanıyoruz!
 
 📞 Örnek Senaryo: Paket Değişikliği Talebi
-
 Projemiz, telekom çağrı merkezlerinde sıkça karşılaşılan "Paket Değişikliği Talebi" gibi senaryoları uçtan uca otomatize etmeyi başarmaktadır. Bu senaryo, müşteriyi tanımlama, mevcut paket durumunu kontrol etme, uygun paketleri listeleme, müşterinin seçimini anlama ve paket değişikliği işlemini başlatma gibi kritik aşamaları içermektedir.
 
 📦 Teslim Edilenler
-
 Çalışan Proje Kodu: Agent, mock fonksiyonlar, arayüz kodu ve benchmark kodu dahil tüm kaynak kodları.
 
 Kurulum Talimatları: Kodun çalıştırılması için gerekli tüm adımlar (gereksinimler, çevre değişkenleri vb.) net bir şekilde belirtilmiştir.
+
+Veri Setleri:
+
+STT ve TTS Test Verileri: Konuşma Tanıma (STT) ve Metin Okuma (TTS) testleri için kullanılan büyük Türkçe ses ve metin veri seti TR.zip dosyası olarak mevcuttur. Bu dosya boyutu nedeniyle doğrudan bu depoya dahil edilmemiştir. Lütfen aşağıdaki bağlantıdan indiriniz ve projenizin ana dizinindeki data/ klasörüne açınız:
+
+TR.zip Veri Seti İndirme Bağlantısı
+
+Diğer mock veri dosyaları (user.json, packages.json) proje dizini içinde data/ klasöründe yer almaktadır.
 
 Proje Dokümantasyonu: Sistem mimarisi, kullanılan framework'ler, implemente edilen senaryolar ve karşılaşılan zorluklara getirilen çözümler detaylıca açıklanmıştır.
 
