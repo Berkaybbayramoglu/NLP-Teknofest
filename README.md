@@ -156,27 +156,27 @@ python scripts/run_chat.py
 
   
 
---cpu CPU’da çalıştırır.
+```--cpu``` CPU’da çalıştırır.
 
   
 
---no-unsloth Unsloth yerine Transformers yükleyici kullanır.
+```--no-unsloth``` Unsloth yerine Transformers yükleyici kullanır.
 
   
 
---audio STT/TTS özelliklerini etkinleştirir.
+```--audio STT/TTS``` özelliklerini etkinleştirir.
 
   
 
---asr-model ASR model kimliği.
+```--asr-model``` ASR model kimliği.
 
   
 
---tts-model TTS model kimliği.
+```--tts-model``` TTS model kimliği.
 
   
 
---speaker TTS konuşmacı adı/ID (model destekliyorsa).
+```--speaker``` TTS konuşmacı adı/ID (model destekliyorsa).
 
   
 
