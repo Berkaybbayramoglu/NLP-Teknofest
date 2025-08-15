@@ -1,45 +1,257 @@
-✨ TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması Projesi ✨
-🚀 Bu depo, TEKNOFEST 2025 Türkçe Doğal Dil İşleme Yarışması'na katılan ekibimizin "Üretken Yapay Zeka Destekli Otonom Çağrı Merkezi Senaryoları" kategorisi için geliştirdiği çığır açan projeyi sunmaktadır. Amacımız, telekomünikasyon sektöründeki karmaşık müşteri taleplerini anlayan, işleyen ve çözüme ulaştıran tamamen otonom bir yapay zeka sistemi geliştirmektir.
 
-🎯 Proje Amacı ve Kapsamı
-Günümüz telekomünikasyon sektöründe müşteri memnuniyetini en üst düzeye çıkarmak için, geleneksel statik çağrı merkezi akışlarının ötesine geçen, dinamik ve insansı yeteneklere sahip bir yapay zeka ajanı tasarlıyoruz. Projemiz, Agentic Framework'ler ve Büyük Dil Modelleri (LLM) kullanarak aşağıdaki temel beklentileri titizlikle karşılamaktadır:
+# Teknofest-NLP
 
-Dinamik Araç Seçimi ve Kullanımı: Ajanımız, konuşma bağlamına göre hangi "aracı" (fonksiyonu, API çağrısını) kullanacağına akıllıca ve dinamik olarak kendisi karar verir. Önceden tanımlanmış if/else ağaçları yerine, LLM'in derin düşünme yeteneği ile ihtiyacı belirler.
+* LangChain tabanlı bir Telekom ajanı ve istenirse metrik (KPI) değerlendirme modülü. İsteğe bağlı sesli giriş (STT) ve sesli çıktı (TTS) desteği içerir.
 
-Bağlam Değişimi ve Kesinti Yönetimi: Müşteri bir senaryo sırasında aniden farklı bir konuya geçtiğinde veya sohbet kesintiye uğradığında, ajan bu durumu anlar, mevcut durumu ustaca yönetir ve diyaloğu sorunsuz bir şekilde sürdürür.
+  
+Hızlı Başlangıç
+```
+git clone <repo-url>
 
-Çok Adımlı Karar Zincirleri: Ajan, tek bir API çağrısıyla çözülemeyen, birden fazla adımdan oluşan karmaşık senaryoları (örn: getUserInfo sonucuna göre getAvailablePackages çağırma) başarıyla yönetir, zincirleme kararlar alır.
+cd llm-agent-kpi
 
-Harici Sistem Simülasyonu (Mock Fonksiyonlar): Gerçekçi bir çağrı merkezi deneyimi sunmak için müşteri veritabanı, faturalama sistemi, paket kataloğu gibi "arka uç sistemlerle" etkileşimi simüle eden kendi "mock" fonksiyonlarımızı geliştirdik ve ajanın araçları olarak sorunsuz bir şekilde entegre ettik.
+python -m venv .venv && source .venv/bin/activate
 
-Durum Yönetimi ve Bellek: Ajan, sohbet geçmişini (bellek) etkin bir şekilde kullanarak daha bilinçli ve bağlama uygun yanıtlar üretir. Tüm etkileşimler uygun bir mimari ile loglanır ve gerçek zamanlı olarak monitör edilebilir.
+pip install -U pip
 
-Hata İşleme ve Kullanıcıya Bilgi Verme: Mock fonksiyonlardan gelebilecek hataları anlar, nazikçe kullanıcıya aktarır ve olası çözüm önerileri sunar. Ham hata mesajları asla kullanıcıya iletilmez.
 
-Minimum Statik Yapı: Çözümümüz, önceden kodlanmış, koşullu dallanma yapıları yerine ajanın dinamik akıl yürütme ve araç çağırma yeteneklerine dayanır. Senaryo akışları, ajanın çalışma zamanındaki kararlarına bırakılır.
+# Bağımlılıkları senin ortamına göre kur:
 
-Açık Kaynak Kod Yaklaşımı: Projemizdeki tüm kodlar açık kaynak kod tabanlı teknolojiler kullanılarak geliştirilmiştir ve Apache Lisansı 2.0 altında lisanslanmıştır. Şeffaflığa ve topluluğa katkıya inanıyoruz!
+# langchain, langchain-core, langchain-community, transformers, unsloth, sentence-transformers,
 
-📞 Örnek Senaryo: Paket Değişikliği Talebi
-Projemiz, telekom çağrı merkezlerinde sıkça karşılaşılan "Paket Değişikliği Talebi" gibi senaryoları uçtan uca otomatize etmeyi başarmaktadır. Bu senaryo, müşteriyi tanımlama, mevcut paket durumunu kontrol etme, uygun paketleri listeleme, müşterinin seçimini anlama ve paket değişikliği işlemini başlatma gibi kritik aşamaları içermektedir.
+# pydantic, numpy, pandas, torch (CUDA/CPU durumuna göre), accelerate, soundfile, librosa vb.
 
-📦 Teslim Edilenler
-Çalışan Proje Kodu: Agent, mock fonksiyonlar, arayüz kodu ve benchmark kodu dahil tüm kaynak kodları.
+export PYTHONPATH=src
+```
+  
 
-Kurulum Talimatları: Kodun çalıştırılması için gerekli tüm adımlar (gereksinimler, çevre değişkenleri vb.) net bir şekilde belirtilmiştir.
+Dizin Yapısı
+```
+llm-agent-kpi/
 
-Veri Setleri:
+├─ pyproject.toml
 
-STT ve TTS Test Verileri: Konuşma Tanıma (STT) ve Metin Okuma (TTS) testleri için kullanılan büyük Türkçe ses ve metin veri seti TR.zip dosyası olarak mevcuttur. Bu dosya boyutu nedeniyle doğrudan bu depoya dahil edilmemiştir. Lütfen aşağıdaki bağlantıdan indiriniz ve projenizin ana dizinindeki data/ klasörüne açınız:
+├─ README.md
 
-TR.zip Veri Seti İndirme Bağlantısı
+├─ .env.example
 
-Diğer mock veri dosyaları (user.json, packages.json) proje dizini içinde data/ klasöründe yer almaktadır.
+├─ data/
 
-Proje Dokümantasyonu: Sistem mimarisi, kullanılan framework'ler, implemente edilen senaryolar ve karşılaşılan zorluklara getirilen çözümler detaylıca açıklanmıştır.
+│ ├─ user.json
 
-Ölçümleme Sonuçları: Çözümün etkinliğini ölçmek üzere geliştirilen KPI'lar (başarı oranı, karar doğruluğu, hata yönetimi etkinliği vb.) raporlanmıştır.
+│ └─ packages.json
 
-Ölçekleme İhtiyaçları: Günlük 100K çağrı için gerekli kaynak tahminleri sunulmuştur.
+├─ scenarios/
 
-Bu proje, Türkçe Doğal Dil İşleme ve Üretken Yapay Zeka alanında telekomünikasyon sektörüne yenilikçi ve otonom bir çözüm sunmayı hedeflemektedir.
+│ └─ scenario1.json
+
+├─ src/
+
+│ └─ agentkit/
+
+│ ├─ __init__.py
+
+│ ├─ config.py
+
+│ ├─ pipeline.py
+
+│ ├─ models/
+
+│ │ ├─ __init__.py
+
+│ │ └─ loader.py
+
+│ ├─ tools/
+
+│ │ ├─ __init__.py
+
+│ │ ├─ api_functions.py
+
+│ │ ├─ schemas.py
+
+│ │ └─ registry.py
+
+│ ├─ agent/
+
+│ │ ├─ __init__.py
+
+│ │ └─ core.py
+
+│ ├─ chat/
+
+│ │ ├─ __init__.py
+
+│ │ └─ cli.py
+
+│ ├─ kpi/
+
+│ │ ├─ __init__.py
+
+│ │ └─ evaluator.py
+
+│ └─ audio/
+
+│ ├─ __init__.py
+
+│ ├─ integration.py
+
+│ └─ stt_tts_toolkit.py ← kendi dosyanızı buraya koyun
+
+└─ scripts/
+
+├─ run_chat.py
+
+└─ run_kpi.py
+```
+  
+
+Yapılandırma
+
+  
+
+.env.example içeriğini .env olarak kopyalayıp düzenleyin veya ortam değişkeni verin.
+
+  
+
+## Önemli anahtarlar:
+
+  
+
+```CUDA_VISIBLE_DEVICES ```, ``` FORCE_CPU ```
+
+  
+
+```MODEL_NAME```,``` DEVICE_MAP```, ```MAX_MEMORY```, ```LOAD_IN_4BIT```
+
+  
+
+```MAX_SEQ_LENGTH```, ```MAX_NEW_TOKENS```, ```TEMPERATURE```
+
+  
+
+```AGENTKIT_DATA_DIR```, ```AGENTKIT_USER_DB```, ```AGENTKIT_PACKAGES_DB```
+
+  
+
+Varsayılan veri dosyaları ```data/``` altındadır.
+
+  
+
+## Ajanı Çalıştırma (CLI)
+
+  
+
+- Metin tabanlı sohbet:
+
+  
+```
+export PYTHONPATH=src
+
+python scripts/run_chat.py
+```
+  
+  
+
+## Seçenekler:
+
+  
+
+--cpu CPU’da çalıştırır.
+
+  
+
+--no-unsloth Unsloth yerine Transformers yükleyici kullanır.
+
+  
+
+--audio STT/TTS özelliklerini etkinleştirir.
+
+  
+
+--asr-model ASR model kimliği.
+
+  
+
+--tts-model TTS model kimliği.
+
+  
+
+--speaker TTS konuşmacı adı/ID (model destekliyorsa).
+
+  
+
+Örnek:
+
+  
+
+```python scripts/run_chat.py --audio --asr-model selimc/whisper-large-v3-turbo-turkish --tts-model tts_models/tr/common-voice/glow-tts ```
+
+  
+  
+
+## Sohbet içinde komutlar:
+
+  
+
+```/stt ```<dosya>: Ses dosyasını metne çevirip ajana gönderir.
+
+  
+
+```/tts ```[çıkış.wav]: Son ajan cevabını ses dosyasına dönüştürür. Varsayılan reply.wav.
+
+  
+
+## KPI Değerlendirme
+
+  
+
+- Senaryo tabanlı ölçüm:
+
+  
+
+```
+export PYTHONPATH=src
+
+python scripts/run_kpi.py --scenario scenarios/scenario1.json --out kpi.csv --verbose
+```
+  
+## Çıktı metrikleri:
+
+  
+
+- tool_success_rate: Beklenen araç sırasına göre isabet oranı.
+
+  
+
+- scenario_success: Araç sırası tamamen doğruysa başarılı.
+
+  
+
+- semantic_similarity: Final Answer metin benzerliği (cümle gömme ile).
+
+  
+
+- response_time_mean, total_response_time: Çalışma süreleri.
+
+  
+
+## Senaryo formatı:
+- ```scenario/``` dizininde bulunan 100 adet senaryo ile kpi yaklaşımları test edilmiştir ve sonuçları **scenario_kpi_evaluate.xlsx** excel tablosunda yer almaktadır.
+```
+{
+
+"id": "S1",
+
+"conversations": [
+
+{ "role": "user", "content": "..." },
+
+{ "role": "assistant", "content": "{\"thought\":\"...\",\"action\":\"Final Answer\",\"action_input\":\"...\"}" }
+
+],
+
+"critical_steps": ["getBillDetails"]
+
+}```
+
+#2025
