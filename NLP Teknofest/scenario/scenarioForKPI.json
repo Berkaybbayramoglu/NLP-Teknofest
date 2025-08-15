@@ -1,0 +1,1304 @@
+[{
+    "id": "SCN_01",
+    "critical_steps": [ "getBillDetails"],
+    "conversations": [
+      { "role": "user", "content": "Son faturamı öğrenebilir miyim?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıyı doğrulamalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Barış Koç, 12345678900" },
+      { "role": "assistant", "content": "{ \"thought\": \"Son fatura bilgisi alınmalı.\", \"action\": \"getBillDetails\", \"action_input\": { \"tc_no\": \"12345678900\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Bilgiler sunulmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Haziran ayına ait faturanız 320.0 TL olup, son ödeme tarihi 10 Temmuz’dur. Ödeme durumu: Gecikmiş.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_02",
+    "critical_steps": [  "blockIncomingNumber"],
+    "conversations": [
+      { "role": "user", "content": "Bir numara beni rahatsız ediyor beni aramasını engellemek istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıyı doğrulamalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Lütfen adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Barış Koç, 12345678900" },
+      { "role": "assistant", "content": "{ \"thought\": \"Engellenmek istenen numara alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Hangi numarayı engellemek istersiniz?\" }" },
+      { "role": "user", "content": "05461234567" },
+      { "role": "assistant", "content": "{ \"thought\": \"Numara engellemeden önce onay alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"05461234567 numarasını engellemeyi onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Numara engellenmeli.\", \"action\": \"blockIncomingNumber\", \"action_input\": { \"tc_no\": \"12345678900\", \"number\": \"05461234567\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem bildirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Belirttiğiniz numara başarıyla engellenmiştir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_03",
+    "critical_steps": [ "enable5G"],
+    "conversations": [
+      { "role": "user", "content": "5G hizmetini aktif etmek istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıyı doğrulamalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Barış Koç, 12345678900" },
+      { "role": "assistant", "content": "{ \"thought\": \"5G aktif edilmeli.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"12345678900\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"5G özelliğiniz aktif edilmiştir. Cihaz ayarlarınızdan kontrol edebilirsiniz.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_04",
+    "critical_steps": [ 
+     "activateEsim"],
+    "conversations": [
+      { "role": "user", "content": "eSIM’i kullanmak istiyorum. Yardımcı olur musunuz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşleme başlamadan önce kullanıcı doğrulanmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Barış Koç, 12345678900" },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM aktivasyonunu başlatmamı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"eSIM aktivasyonu başlatılmalı.\", \"action\": \"activateEsim\", \"action_input\": { \"tc_no\": \"12345678900\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı bilgilendirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM aktivasyon işleminiz başarıyla başlatıldı. Kurulum için cihaz ayarlarınızı kontrol edin.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_05",
+    "critical_steps": [ "activateChildProfile"],
+    "conversations": [
+      { "role": "user", "content": "Çocuk koruma profili açmak istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıyı doğrulamalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Barış Koç, 12345678900" },
+      { "role": "assistant", "content": "{ \"thought\": \"Çocuk profili etkinleştirilmeli.\", \"action\": \"activateChildProfile\", \"action_input\": { \"tc_no\": \"12345678900\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem sonucu bildirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Çocuk koruma profili başarıyla etkinleştirildi. Bu profil kapsamında internet içeriğiniz filtrelenecektir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_06",
+    "critical_steps": ["getUserInfo"],
+    "conversations": [
+      { "role": "user", "content": "Eşim Zeynep Koç’u yetkili kişi olarak eklemek istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Barış Koç, 12345678900" },
+      { "role": "assistant", "content": "{ \"thought\": \"Eklenmek istenen kişinin bilgileri alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Eklemek istediğiniz kişinin adını ve telefon numarasını paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Zeynep Koç, 05051234567" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kişi zaten listede olabilir, kontrol edilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Zeynep Koç (05051234567) isimli kişi zaten yetkili kişiler listenizde kayıtlı görünüyor.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_07",
+    "critical_steps": [ "activateEsim"],
+    "conversations": [
+      { "role": "user", "content": "eSIM kullanmak istiyorum. Yardımcı olabilir misiniz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Ahmet Yılmaz, 12345678901" },
+      { "role": "assistant", "content": "{ \"thought\": \"eSIM şu anda aktif değil, aktivasyon başlatılmalı.\", \"action\": \"activateEsim\", \"action_input\": { \"tc_no\": \"12345678901\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem sonucu bildirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM aktivasyon işleminiz başarıyla başlatıldı. Kurulum için cihaz ayarlarınıza geçebilirsiniz.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_08",
+    "critical_steps": [ "deactivateChildProfile"],
+    "conversations": [
+      { "role": "user", "content": "Çocuk modunu kapatmak istiyorum. Şu an aktif galiba bazı sitelere giremiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Lütfen adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Ahmet Yılmaz, 12345678901" },
+      { "role": "assistant", "content": "{ \"thought\": \"Çocuk modu açık, kapatma işlemi başlatılmalı.\", \"action\": \"deactivateChildProfile\", \"action_input\": { \"tc_no\": \"12345678901\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı bilgilendirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Çocuk profili kapatılmıştır. Artık tüm içeriklere erişim sağlanabilir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_09",
+    "critical_steps": [ "scheduleTechnicalSupport"],
+    "conversations": [
+      { "role": "user", "content": "Evimde bağlantı sürekli kopuyor, bir teknik destek çağırmak istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Adres bilgisi sistemde var, önce kullanıcıyı doğrulamalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Lütfen adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Ahmet Yılmaz, 12345678901" },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"10 Ağustos 14:00 için randevu oluşturmamı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Teknik servis randevusu oluşturulmalı.\", \"action\": \"scheduleTechnicalSupport\", \"action_input\": { \"tc_no\": \"12345678901\", \"preferred_time\": \"2025-08-10 14:00\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Bilgi verilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"10 Ağustos saat 14:00 için teknik servis randevunuz oluşturuldu. Uzman ekip adresinize yönlendirilecektir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_10",
+    "critical_steps": [ "getAvailablePackages", "initiatePackageChange"],
+    "conversations": [
+      { "role": "user", "content": "Hocam ben öğrenci paketi bakıyordum, acaba neler var?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıyı doğrulayıp öğrenci profiline uygun paketler sunmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Mert Aslan, 12345678903" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının grubu öğrenci olduğundan öğrenciye özel paketler sunulmalı.\", \"action\": \"getAvailablePackages\", \"action_input\": { \"tc_no\": \"12345678903\", \"category\": \"Mobil\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Uygun paketler listelenmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Size özel bazı genç paketleri şunlardır: Genç Cool 30 GB (400 TL), Genç Cool 60 GB (500 TL), Genç Cool 90 GB (600 TL). Hangisini tercih edersiniz?\" }" },
+      { "role": "user", "content": "60 GB olanı almak istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının seçtiği paketi tanımlamalıyım.\", \"action\": \"initiatePackageChange\", \"action_input\": { \"tc_no\": \"12345678903\", \"new_package\": \"Genç Cool 60 GB\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Paket tanımlama işlemi başarıyla sonuçlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Genç Cool 60 GB paketiniz tanımlanmıştır. 500 TL’lik sabit fiyatla 12 ay boyunca kullanabilirsiniz.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_11",
+    "critical_steps": [ "getAvailablePackages", "initiatePackageChange"],
+    "conversations": [
+      { "role": "user", "content": "Ben fazla internet kullanmıyorum ama çok konuşuyorum. Daha çok dakika ve SMS içeren bir paket var mı?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının yaş grubu yaşlı olabilir, ona uygun konuşma ve SMS odaklı paketler sunmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Lütfen adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Hüseyin Öztürk, 12345678906" },
+      { "role": "assistant", "content": "{ \"thought\": \"Yaşlı kullanıcı için uygun konuşma ve SMS içeren paketler getirilmeli.\", \"action\": \"getAvailablePackages\", \"action_input\": { \"tc_no\": \"12345678906\", \"category\": \"Mobil\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Paket önerisi sunulmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Size uygun bazı yaş dostu paketler: Yaş Dostu Plus (145 TL, sınırsız iç hat görüşme, 2000 SMS), Yaş Dostu Orta (120 TL, 5000 DK, 1000 SMS). Tercih edebilirsiniz.\" }" },
+      { "role": "user", "content": "Sınırsız olanı istiyorum, yani Yaş Dostu Plus." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının seçtiği paket tanımlanmalı.\", \"action\": \"initiatePackageChange\", \"action_input\": { \"tc_no\": \"12345678906\", \"new_package\": \"Yaş Dostu Plus\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı, kullanıcı bilgilendirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Yaş Dostu Plus paketiniz başarıyla tanımlandı. Sınırsız iç hat görüşme ve 2000 SMS hakkınız aktif hale getirildi. Güle güle kullanın!\" }" }
+    ]
+  },
+  {
+    "id": "SCN_12",
+    "critical_steps": [  "initiatePackageChange"],
+    "conversations": [
+      { "role": "user", "content": "Ev internetimin hızını artırmak istiyorum, ne önerebilirsiniz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Burak Yıldırım, 12345678908" },
+      { "role": "assistant", "content": "{ \"thought\": \"Mevcut paket 500Mbps. Daha hızlı için >500Mbps seçenekleri sunmalıyım (1000Mbps).\", \"action\": \"Final Answer\", \"action_input\": \"Fiber altyapınız var. 500 Mbps üzeri seçeneklerimiz: 1) XXL Ev Paketi- 1000MBPS (880 TL/Ay) 2) Fiber Uçuran Large - 1000MBPS (800 TL/Ay). Hangisini tercih edersiniz?\" }" },
+      { "role": "user", "content": "Fiber Uçuran Large - 1000MBPS olsun." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı seçti, açık onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"'Fiber Uçuran Large - 1000MBPS' paketine geçişinizi başlatmamı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay alındı, paket değişikliği başlat.\", \"action\": \"initiatePackageChange\", \"action_input\": { \"tc_no\": \"12345678908\", \"new_package\": \"Fiber Uçuran Large - 1000MBPS\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı, bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Geçiş talebiniz alındı. 'Fiber Uçuran Large - 1000MBPS' paketiniz kısa süre içinde aktif olacaktır. İlk faturanıza aktivasyon ücreti yansıyabilir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_13",
+    "critical_steps": [  "initiatePackageChange"],
+    "conversations": [
+      { "role": "user", "content": "Faturam yüksek geliyor, hızdan biraz feragat edip daha uygun bir pakete geçebilir miyiz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Burak Yıldırım, 12345678908" },
+      { "role": "assistant", "content": "{ \"thought\": \"500Mbps altına düşecek ekonomik fiber paketleri önermeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Daha ekonomik fiber seçenekler: 1) Bol Bol İzle Süper Hızlı - 100MBPS (556 TL/Ay) 2) Bol Bol İzle Uçuran Hız- 200MBPS (660 TL/Ay) 3) Bol Bol İzle Hızlı - 50MBPS (459 TL/Ay, fiber gerekmez). Hangisini tercih edersiniz?\" }" },
+      { "role": "user", "content": "Bol Bol İzle Süper Hızlı - 100MBPS olsun." },
+      { "role": "assistant", "content": "{ \"thought\": \"Seçim yapıldı, açık onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"'Bol Bol İzle Süper Hızlı - 100MBPS' paketine geçişinizi onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onaydan sonra değiştir.\", \"action\": \"initiatePackageChange\", \"action_input\": { \"tc_no\": \"12345678908\", \"new_package\": \"Bol Bol İzle Süper Hızlı - 100MBPS\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Paket değişikliği başlatıldı. 'Bol Bol İzle Süper Hızlı - 100MBPS' kısa süre içinde aktif olacaktır.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_14",
+    "critical_steps": [  "initiatePackageChange"],
+    "conversations": [
+      { "role": "user", "content": "Seyahat paketim bitiyor. Türkiye’de daha çok internet içeren bir pakete geçmek istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Önce kimlik doğrulaması.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Selin Kurt, 12345678909" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı veri ağırlıklı ve konuşma da yüksek. 20GB üstü mobil paketleri önermeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Veri odaklı seçeneklerimiz: 1) Müthiş 40 GB (430 TL/AY) 2) Müthiş 60 GB (480 TL/AY) 3) Fırsat 40 GB (425 TL/AY) 4) Altın Fırsat 60 GB (475 TL/AY). Hangisini istersiniz?\" }" },
+      { "role": "user", "content": "Müthiş 60 GB mantıklı." },
+      { "role": "assistant", "content": "{ \"thought\": \"Seçim sonrası açık onay şart.\", \"action\": \"Final Answer\", \"action_input\": \"'Müthiş 60 GB' paketine geçişinizi başlatmamı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay alındı, değişikliği başlat.\", \"action\": \"initiatePackageChange\", \"action_input\": { \"tc_no\": \"12345678909\", \"new_package\": \"Müthiş 60 GB\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Geçiş talebiniz alındı. 'Müthiş 60 GB' paketi kısa süre içinde aktif olacaktır. Güle güle kullanın!\" }" }
+    ]
+  },
+  {
+    "id": "SCN_15",
+    "critical_steps": ["getUserInfo"],
+    "conversations": [
+      { "role": "user", "content": "Ev internetimi hızlandırmak istiyorum ama fiyat çok artmasın." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Burak Yıldırım, 12345678908" },
+      { "role": "assistant", "content": "{ \"thought\": \"Mevcut paket 500Mbps. Üzerine 1000Mbps paketler var.\", \"action\": \"Final Answer\", \"action_input\": \"Daha hızlı seçenekler: 1) XXL Ev Paketi - 1000MBPS (880 TL/Ay) 2) Fiber Uçuran Large - 1000MBPS (800 TL/Ay). İster misiniz?\" }" },
+      { "role": "user", "content": "Bu fiyatlar bana yüksek geldi, değiştirmeyeyim." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı reddetti, işlemi sonlandırmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Anladım, mevcut paketinizle devam ediyorsunuz. İleride fikriniz değişirse size özel fırsatları tekrar sunabilirim.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_16",
+    "critical_steps": ["getUserInfo"],
+    "conversations": [
+      { "role": "user", "content": "Türkiye’deyken biraz daha fazla internet almayı düşünüyordum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Selin Kurt, 12345678909" },
+      { "role": "assistant", "content": "{ \"thought\": \"Mevcut paket 20GB, 20GB üzeri paketleri önermeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Veri odaklı seçeneklerimiz: 1) Müthiş 40 GB (430 TL/Ay) 2) Müthiş 60 GB (480 TL/Ay) 3) Altın Fırsat 60 GB (475 TL/Ay). İster misiniz?\" }" },
+      { "role": "user", "content": "Yok ya, şu anki yeterli geliyor." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı teklifi reddetti, işlemi bitir.\", \"action\": \"Final Answer\", \"action_input\": \"Tamamdır, mevcut 20GB paketinizle devam ediyorsunuz. Kullanımınız artarsa tekrar yardımcı olabilirim.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_17",
+    "critical_steps": [ "checkServiceAvailability", "scheduleTechnicalSupport"],
+    "conversations": [
+      { "role": "user", "content": "Taşınacağım. Yeni adreste fiber var mı, bakabilir misiniz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Ali Erdoğan, 15742836684" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının verdiği yeni adres için uygunluk kontrolü yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi il, ilçe/mahalle, cadde/sokak ve kapı numarası ile yazabilir misiniz?\" }" },
+      { "role": "user", "content": "Adana, Organize Sanayi 5. Bölge, 10. Cadde No: 22" },
+      { "role": "assistant", "content": "{ \"thought\": \"Servis uygunluğu sorgulanmalı.\", \"action\": \"checkServiceAvailability\", \"action_input\": { \"tc_no\": \"15742836684\", \"address\": \"Adana, Organize Sanayi 5. Bölge, 10. Cadde No: 22\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Sonuç olumlu, sonraki adım için randevu teklif edilebilir ama önce onay alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizde fiber altyapı uygun görünüyor. Kurulum için teknik servis randevusu oluşturmamı ister misiniz?\" }" },
+      { "role": "user", "content": "Evet, uygun en yakın tarih olabilir." },
+      { "role": "assistant", "content": "{ \"thought\": \"Randevu için tercihli zaman almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Tercih ettiğiniz gün ve saat aralığını paylaşır mısınız?\" }" },
+      { "role": "user", "content": "2025-08-12 saat 10:00" },
+      { "role": "assistant", "content": "{ \"thought\": \"Açık onay aldıktan sonra randevu oluşturacağım.\", \"action\": \"Final Answer\", \"action_input\": \"12 Ağustos 10:00 için randevu oluşturmayı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası randevu planla.\", \"action\": \"scheduleTechnicalSupport\", \"action_input\": { \"tc_no\": \"15742836684\", \"preferred_time\": \"2025-08-12 10:00\", \"issue\": \"Yeni adrese fiber kurulum\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Randevunuz 12 Ağustos 10:00 için oluşturuldu. Ekiplerimiz belirtilen adrese yönlendirilecektir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_18",
+    "critical_steps": ["getUserInfo"],
+    "conversations": [
+      { "role": "user", "content": "İş yerimde bağlantı çok zayıf, bir ekip gelebilir mi?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Önce kimlik doğrulama.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Ali Erdoğan, 15742836684" },
+      { "role": "assistant", "content": "{ \"thought\": \"Adres netleştirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Ekip gelmesini istediğiniz adresi paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Adana Organize Sanayi 4. Bölge, 3. Cadde No: 5" },
+      { "role": "assistant", "content": "{ \"thought\": \"Randevu için zaman tercihi alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Sizin için uygun gün/saat aralığı nedir?\" }" },
+      { "role": "user", "content": "Hafta içi 18:00 sonrası" },
+      { "role": "assistant", "content": "{ \"thought\": \"Çalışma saatleri ile çakışıyor olabilir, onay istemeden önce uygunluk belirtmeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Ne yazık ki teknik ekiplerimizin hafta içi 18:00 sonrası çalışma saati bulunmuyor. Hafta içi 09:00–17:00 ya da Cumartesi 10:00–16:00 aralığında uygun musunuz?\" }" },
+      { "role": "user", "content": "Hayır, o saatlerde de uygun değilim." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı uygun değil; randevu oluşturmadan süreci kapatmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Anladım. Uygun olduğunuz bir zaman aralığı olduğunda yeniden randevu talep edebilirsiniz. Şimdilik randevu oluşturmadım.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_19",
+    "critical_steps": [ "checkServiceAvailability",  "scheduleTechnicalSupport"],
+    "conversations": [
+      { "role": "user", "content": "1000 Mbps hız desteği binamda var mı, kontrol eder misiniz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Neşe Bozkurt, 32611872942" },
+      { "role": "assistant", "content": "{ \"thought\": \"Adres için servis uygunluğu kontrolü.\", \"action\": \"checkServiceAvailability\", \"action_input\": { \"tc_no\": \"32611872942\", \"address\": \"Eskişehir, Fiber Blokları No: 88\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Sonuç olumlu, bir sonraki adımda kullanıcıya bilgi verip randevuyu önermeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Adresinizde 1000 Mbps için altyapı uygun görünüyor. İsterseniz hız yükseltme kurulum kontrolü için teknik randevu talep edebilirsiniz. Randevu oluşturmamı ister misiniz?\" }" },
+      { "role": "user", "content": "Evet, uygun." },
+      { "role": "assistant", "content": "{ \"thought\": \"Tarih/saat tercihini almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Sizin için hangi gün ve saat uygundur?\" }" },
+      { "role": "user", "content": "2025-08-11, 14:00" },
+      { "role": "assistant", "content": "{ \"thought\": \"Açık onay almadan randevu oluşturmamalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"11 Ağustos 14:00 için randevu oluşturmamı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Onay veriyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onaylandı; randevuyu planla.\", \"action\": \"scheduleTechnicalSupport\", \"action_input\": { \"tc_no\": \"32611872942\", \"preferred_time\": \"2025-08-11 14:00\", \"issue\": \"Hız yükseltme için saha kontrolü\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıyı bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Randevunuz 11 Ağustos 14:00 için oluşturuldu. Uzman ekip hız yükseltme uygunluğunu yerinde kontrol edecektir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_20",
+    "critical_steps": ["getUserInfo"],
+    "conversations": [
+      { "role": "user", "content": "İnternet hızım yine düştü, teknik servis çağırabilir miyiz?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Neşe Bozkurt, 32611872942" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının geçmiş randevularını kontrol etmeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Sistemde 10 Haziran 2025 saat 14:00 için geçmişte oluşturulmuş bir 'yavaş internet' randevunuz bulunuyor. Yeni bir randevu oluşturmak ister misiniz?\" }" },
+      { "role": "user", "content": "Hayır, şimdilik yenisine gerek yok." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı istemedi, işlem yapılmayacak.\", \"action\": \"Final Answer\", \"action_input\": \"Anladım, yeni bir randevu oluşturmadım. Mevcut randevu kayıtlarınızı ve geçmiş işlemlerinizi istediğiniz zaman görüntüleyebilirsiniz.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_21",
+    "critical_steps": [  "cancelSubscription"],
+    "conversations": [
+      { "role": "user", "content": "Ev internetimi tamamen iptal ettirmek istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Alperen Aydın, 12398745610" },
+      { "role": "assistant", "content": "{ \"thought\": \"İptal ciddi bir işlem, kullanıcıdan açık onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"'Bol Bol İzle Uçuran Hız - 200MBPS' paketinizin iptalini onaylıyor musunuz? İptal sonrası tüm internet erişiminiz sonlanacaktır.\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay alındı, iptal işlemini başlat.\", \"action\": \"cancelSubscription\", \"action_input\": { \"tc_no\": \"12398745610\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İptal işlemi tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Aboneliğiniz iptal edilmiştir. Ekiplerimiz modem iadesi için sizinle iletişime geçecektir.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_22",
+    "critical_steps": ["getUserInfo"],
+    "conversations": [
+      { "role": "user", "content": "Paketimi iptal ettirebilir miyim diye bir bakmak istedim." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+      { "role": "user", "content": "Alperen Aydın, 12398745610" },
+      { "role": "assistant", "content": "{ \"thought\": \"İptal onayı almadan işlem yapmam.\", \"action\": \"Final Answer\", \"action_input\": \"'Bol Bol İzle Uçuran Hız - 200MBPS' paketinizin iptalini onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Yok, şimdilik devam edeyim." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı vazgeçti.\", \"action\": \"Final Answer\", \"action_input\": \"Tamamdır, paketiniz aktif olarak devam ediyor. İleride iptal etmek isterseniz yeniden talep oluşturabilirsiniz.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_23",
+    "critical_steps": [ "getUsageHistory"],
+    "conversations": [
+      { "role": "user", "content": "Son aylardaki kullanım detaylarımı görebilir miyim?" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Seyit Kaan Güneş, 21398765432" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanım geçmişini sorgulamalıyım.\", \"action\": \"getUsageHistory\", \"action_input\": { \"tc_no\": \"21398765432\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıya verileri net şekilde sunmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Geçen ayki kullanım bilgileriniz: 18 GB internet, 320 dakika arama, 8 SMS. Ortalama hızınız 25 Mbps.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_24",
+    "critical_steps": [ "getUsageHistory"],
+    "conversations": [
+      { "role": "user", "content": "Kullanımımı görebilir miyim, paket bana fazla geliyor olabilir." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Seyit Kaan Güneş, 21398765432" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanım geçmişini çekmeliyim.\", \"action\": \"getUsageHistory\", \"action_input\": { \"tc_no\": \"21398765432\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı az veri kullanıyor, belki paket küçültme veya iptal önerilebilir.\", \"action\": \"Final Answer\", \"action_input\": \"Son ay 18 GB internet, 320 dakika arama, 8 SMS kullanmışsınız. Mevcut paketiniz 20 GB olduğu için isterseniz daha düşük bir pakete geçebilir ya da aboneliğinizi iptal edebilirsiniz. Hangisini tercih edersiniz?\" }" },
+      { "role": "user", "content": "Yok, böyle iyi. Değişiklik yapmayalım." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı istemedi.\", \"action\": \"Final Answer\", \"action_input\": \"Tamamdır, mevcut paketinizi koruyoruz. İleride fikriniz değişirse yardımcı olabilirim.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_25",
+    "critical_steps": [  "blockIncomingNumber"],
+    "conversations": [
+      { "role": "user", "content": "Bir numarayı engellemek istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Süleyman Yılmaz, 12398364729" },
+      { "role": "assistant", "content": "{ \"thought\": \"Engellenmek istenen numarayı almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Hangi numarayı engellemek istersiniz?\" }" },
+      { "role": "user", "content": "0544-987-1122" },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay almadan işlem yapmam.\", \"action\": \"Final Answer\", \"action_input\": \"'0544-987-1122' numarasını engellememi onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası engelleme işlemi yapılır.\", \"action\": \"blockIncomingNumber\", \"action_input\": { \"tc_no\": \"12398364729\", \"number\": \"0544-987-1122\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"'0544-987-1122' numarası başarıyla engellendi.\" }" }
+    ]
+  },
+  {
+    "id": "SCN_26",
+    "critical_steps": [ "unblockIncomingNumber"],
+    "conversations": [
+      { "role": "user", "content": "Daha önce engellediğim bir numarayı açmak istiyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+      { "role": "user", "content": "Selin Kara, 44532619752" },
+      { "role": "assistant", "content": "{ \"thought\": \"Hangi numaranın engelini kaldırmak istediğini sormalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Hangi numaranın engelini kaldırmak istersiniz?\" }" },
+      { "role": "user", "content": "0501-555-8899" },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay almadan işlem yapmam.\", \"action\": \"Final Answer\", \"action_input\": \"'0501-555-8899' numarasının engelini kaldırmamı onaylıyor musunuz?\" }" },
+      { "role": "user", "content": "Evet, onaylıyorum." },
+      { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası engel kaldırılır.\", \"action\": \"unblockIncomingNumber\", \"action_input\": { \"tc_no\": \"44532619752\", \"number\": \"0501-555-8899\" } }" },
+      { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"'0501-555-8899' numarasının engeli kaldırıldı.\" }" }
+    ]
+  },
+{
+  "id": "SCN_27",
+  "critical_steps": [  "blockIncomingNumber"],
+  "conversations": [
+    { "role": "user", "content": "0532-222-1111 numarasını engelleyin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+    { "role": "user", "content": "Ali Erdoğan, 15742836684" },
+    { "role": "assistant", "content": "{ \"thought\": \"Numara zaten engelli mi kontrol edilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Sistemde '0532-222-1111' numarasının zaten engelli olduğu görünüyor. Yine de işlem yapmak ister misiniz?\" }" },
+    { "role": "user", "content": "Hayır, gerek yok." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı istemedi, işlem yapılmayacak.\", \"action\": \"Final Answer\", \"action_input\": \"Tamamdır, mevcut engel listesi aynı şekilde korunuyor.\" }" }
+  ]
+},
+{
+  "id": "SCN_28",
+  "critical_steps": [ "unblockIncomingNumber"],
+  "conversations": [
+    { "role": "user", "content": "0544-666-7788 numarasının engelini kaldırın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Neşe Bozkurt, 32611872942" },
+    { "role": "assistant", "content": "{ \"thought\": \"Numara engelli listede değilse bilgilendirmeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"'0544-666-7788' numarası şu anda engelli listesinde görünmüyor. Yine de engel kaldırma işlemi yapmak ister misiniz?\" }" },
+    { "role": "user", "content": "Hayır, gerek yok." },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem yapılmayacak.\", \"action\": \"Final Answer\", \"action_input\": \"Tamamdır, herhangi bir değişiklik yapılmadı.\" }" }
+  ]
+},
+{
+  "id": "SCN_29",
+  "critical_steps": ["blockIncomingNumber"],
+  "conversations": [
+    { "role": "user", "content": "İki numarayı aynı anda engellemek istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulama yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Süleyman Yılmaz, 12398364729" },
+    { "role": "assistant", "content": "{ \"thought\": \"Numaraları almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Engellemek istediğiniz numaraları lütfen aralarına virgül koyarak yazınız.\" }" },
+    { "role": "user", "content": "0533-123-4567, 0545-987-6543" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay almadan işlem yapmam.\", \"action\": \"Final Answer\", \"action_input\": \"'0533-123-4567' ve '0545-987-6543' numaralarını engellememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası işlemi yap.\", \"action\": \"blockIncomingNumber\", \"action_input\": { \"tc_no\": \"12398364729\", \"number\": \"0533-123-4567\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İkinci numarayı da engelle.\", \"action\": \"blockIncomingNumber\", \"action_input\": { \"tc_no\": \"12398364729\", \"number\": \"0545-987-6543\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Belirttiğiniz iki numara da başarıyla engellendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_30",
+   "critical_steps": [  "unblockIncomingNumber"],
+  "conversations": [
+    { "role": "user", "content": "Listemdeki birkaç numaranın engelini kaldırmak istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Ali Erdoğan, 15742836684" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hangi numaraların engelini kaldırmak istediğini almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Engelini kaldırmak istediğiniz numaraları lütfen aralarına virgül koyarak yazınız.\" }" },
+    { "role": "user", "content": "0532-222-1111, 0544-111-2222" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay almadan işlem yapmam.\", \"action\": \"Final Answer\", \"action_input\": \"'0532-222-1111' ve '0544-111-2222' numaralarının engelini kaldırmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"İlk numaranın engelini kaldır.\", \"action\": \"unblockIncomingNumber\", \"action_input\": { \"tc_no\": \"15742836684\", \"number\": \"0532-222-1111\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İkinci numaranın engelini kaldır.\", \"action\": \"unblockIncomingNumber\", \"action_input\": { \"tc_no\": \"15742836684\", \"number\": \"0544-111-2222\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Belirttiğiniz iki numaranın da engeli başarıyla kaldırıldı.\" }" }
+  ]
+},
+{
+  "id": "SCN_31",
+  "critical_steps": [  "activateEsim"],
+  "conversations": [
+    { "role": "user", "content": "Telefonumda eSIM kullanmak istiyorum, açabilir misiniz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Gizem Uysal, 20142172960" },
+    { "role": "assistant", "content": "{ \"thought\": \"eSIM şu anda pasif, onay alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM’inizi aktif hale getirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası eSIM’i aktifleştir.\", \"action\": \"activateEsim\", \"action_input\": { \"tc_no\": \"20142172960\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem başarılı.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM aktivasyon işleminiz başlatıldı. Kurulum için cihaz ayarlarınızı kontrol edebilirsiniz.\" }" }
+  ]
+},{
+  "id": "SCN_32",
+  "critical_steps": [  "activateEsim"],
+  "conversations": [
+    { "role": "user", "content": "eSIM’i kullanmaya geçebilir miyim?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce kimlik doğrulaması.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+    { "role": "user", "content": "Berk Doğan, 43211154762" },
+    { "role": "assistant", "content": "{ \"thought\": \"eSIM pasif, onay alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM’inizi aktif hale getirmemi ister misiniz?\" }" },
+    { "role": "user", "content": "Yok, şimdilik kalsın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı reddetti.\", \"action\": \"Final Answer\", \"action_input\": \"Tamamdır, eSIM aktivasyonu yapılmadı. Dilediğiniz zaman yeniden talep edebilirsiniz.\" }" }
+  ]
+},
+{
+  "id": "SCN_33",
+  "critical_steps": [ "sendGiftPackage"],
+  "conversations": [
+    { "role": "user", "content": "Arkadaşıma 12 GB internet hediye edin ve işlemi hemen başlatın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Limit > 10 GB, önce TC al ve onayla birlikte denerken hata dönecek.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı ve alıcı numarasını yazın. (Örn: 26626005142, 0532-764-2290)\" }" },
+    { "role": "user", "content": "26626005142, 0532-764-2290" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay al ve hatayı kullanıcıya yansıt.\", \"action\": \"Final Answer\", \"action_input\": \"0532-764-2290 numarasına 12 GB göndermemi onaylıyor musunuz? (Not: Maksimum 10 GB gönderilebilir.)\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Fonksiyon limit aşımı hatası verecek.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"26626005142\", \"receiver_number\": \"0532-764-2290\", \"package_type\": \"internet\", \"amount\": 12 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem limit nedeniyle geçersiz.\", \"action\": \"Final Answer\", \"action_input\": \"Geçersiz işlem: Hediye limiti aşıldı (en fazla 10 GB). İşlem iptal edildi.\" }" }
+  ]
+},
+{
+  "id": "SCN_34",
+  "critical_steps": [  "suspendLineDueToLoss"],
+  "conversations": [
+    { "role": "user", "content": "Telefonumu kaybettim, hattımı hemen durdurabilir misiniz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Yunus İlhan, 13322644858" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay almadan işlem yapmam.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı kayıp nedeniyle geçici olarak askıya almamı onaylıyor musunuz? Bu süre boyunca arama ve internet kullanımı yapılamaz.\" }" },
+    { "role": "user", "content": "Evet, hemen askıya alın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası işlem başlatılmalı.\", \"action\": \"suspendLineDueToLoss\", \"action_input\": { \"tc_no\": \"13322644858\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınız geçici olarak askıya alındı. Hat açma işlemi için bizimle tekrar iletişime geçebilirsiniz.\" }" }
+  ]
+},
+{
+  "id": "SCN_35",
+  "critical_steps": [  "removeDataRestriction"],
+  "conversations": [
+    { "role": "user", "content": "Telefonumda bazı sitelere giremiyorum, bu kısıtı kaldırabilir misiniz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Yunus İlhan, 13322644858" },
+    { "role": "assistant", "content": "{ \"thought\": \"İnternet profili 'child' olarak görünüyor. Onay almam gerekir.\", \"action\": \"Final Answer\", \"action_input\": \"Veri kullanım kısıtlamasını kaldırmamı onaylıyor musunuz? Bu durumda tüm sitelere erişim sağlanır.\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası kısıtlamayı kaldır.\", \"action\": \"removeDataRestriction\", \"action_input\": { \"tc_no\": \"13322644858\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Veri kullanım kısıtlaması kaldırıldı. Artık tüm sitelere erişebilirsiniz.\" }" }
+  ]
+},{
+  "id": "SCN_36",
+  "critical_steps": [ "checkServiceStatus",  "removeDataRestriction"],
+  "conversations": [
+    { "role": "user", "content": "Beni sınırlamışsınız, interneti açın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+    { "role": "user", "content": "Harun Korkmaz, 26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının internet profili normal, kısıtlama yok. Bilgilendirme yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızda aktif bir veri kısıtlaması bulunmuyor. Tüm sitelere erişebilirsiniz.\" }" }
+  ]
+},{
+  "id": "SCN_37",
+  "critical_steps": [  "suspendLineDueToLoss",  "removeDataRestriction"],
+  "conversations": [
+    { "role": "user", "content": "Telefonumu kaybettim, hattımı hemen kapatın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce kimlik doğrulaması.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+    { "role": "user", "content": "Yunus İlhan, 13322644858" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay almadan hattı askıya almam.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı kayıp nedeniyle askıya almamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hat askıya alınmalı.\", \"action\": \"suspendLineDueToLoss\", \"action_input\": { \"tc_no\": \"13322644858\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hat askıya alındı, kullanıcı bilgilendirilmeli.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınız geçici olarak askıya alındı. Bulduğunuzda tekrar açabiliriz.\" }" },
+    { "role": "user", "content": "Telefonu buldum ama bazı siteler hâlâ kapalı, onları açabilir miyiz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının internet profili 'child', bu yüzden veri kısıtlaması var. Onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Veri kısıtlamasını kaldırmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, kaldırın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay sonrası kısıtlamayı kaldır.\", \"action\": \"removeDataRestriction\", \"action_input\": { \"tc_no\": \"13322644858\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Veri kısıtlaması kaldırıldı, artık tüm sitelere erişebilirsiniz.\" }" }
+  ]
+},{
+  "id": "SCN_38",
+  "critical_steps": [  "checkServiceStatus", "consent"],
+  "conversations": [
+    { "role": "user", "content": "Geçen hafta kaybolan telefonumu buldum, hattımı açabilir misiniz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Harun Korkmaz, 26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hat şu anda askıda, açma talebinden önce onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı tekrar aktif hale getirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hat açma işlemi, suspend fonksiyonunun ters işlemidir, burada bilgilendirme yapacağım.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınız aktif hale getirildi.\" }" },
+    { "role": "user", "content": "Peki internetim kısıtlıysa da açar mısınız?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Harun’un internet profili normal, kısıtlama yok, bu bilgiyi iletmeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızda aktif bir veri kısıtlaması bulunmuyor. Tüm sitelere erişebilirsiniz.\" }" }
+  ]
+},{
+  "id": "SCN_39",
+
+  "critical_steps": [ "activateChildProfile"],
+  "conversations": [
+    { "role": "user", "content": "Torunum bu hattı kullanacak, çocuk profili açtırabilir miyiz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapmalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı alabilir miyim?\" }" },
+    { "role": "user", "content": "Kemal Şahin, 12345678910" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcıda çocuk profili yok, onay alıp açabilirim.\", \"action\": \"Final Answer\", \"action_input\": \"Çocuk profili aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem yapılmalı.\", \"action\": \"activateChildProfile\", \"action_input\": { \"tc_no\": \"12345678910\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"Çocuk profili aktifleştirildi. Artık zararlı siteler engellenecek.\" }" }
+  ]
+},{
+  "id": "SCN_40",
+  "critical_steps": [  "deactivateChildProfile"],
+  "conversations": [
+    { "role": "user", "content": "Benim internetim kısıtlı sanırım, çocuk profili kapatılsın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Hüseyin Öztürk, 12345678906" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bu kullanıcıda aktif çocuk profili yok, bunu iletmeliyim.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızda aktif bir çocuk profili bulunmamaktadır, kaldırma işlemi yapılamaz.\" }" }
+  ]
+},
+{
+  "id": "SCN_41",
+  "critical_steps": [ "blockIncomingNumber", "getCallHistory"],
+  "conversations": [
+    { "role": "user", "content": "0541-222-3344 numarasını engelleyin ve son 5 aramamı gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only, engelleme için onay isteyeceğim.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay al.\", \"action\": \"Final Answer\", \"action_input\": \"'0541-222-3344' numarasını engellememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Engelle.\", \"action\": \"blockIncomingNumber\", \"action_input\": { \"tc_no\": \"26626005142\", \"number\": \"0541-222-3344\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Çağrı geçmişini ver.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özet.\", \"action\": \"Final Answer\", \"action_input\": \"Numara engellendi. Son 5 çağrı kaydınızı paylaştım.\" }" }
+  ]
+},
+{
+  "id": "SCN_42",
+  "critical_steps": [ "unblockIncomingNumber",  "enable5G"],
+  "conversations": [
+    { "role": "user", "content": "0501-222-3344 numarasının engelini kaldırın ve 5G’yi açın." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only. Numara engelli olmayabilir ve 5G zaten aktif olabilir.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı iletir misiniz?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Unblock için onay.\", \"action\": \"Final Answer\", \"action_input\": \"'0501-222-3344' numarasının engelini kaldırmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet." },
+    { "role": "assistant", "content": "{ \"thought\": \"Engel kaldırmayı dene (listede olmayabilir).\", \"action\": \"unblockIncomingNumber\", \"action_input\": { \"tc_no\": \"26626005142\", \"number\": \"0501-222-3344\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"5G için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı 5G’ye geçirmek için kontrol/etkinleştirme yapmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"5G zaten aktif olabilir.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Durumu açıkla.\", \"action\": \"Final Answer\", \"action_input\": \"Belirttiğiniz numara engelli listede görünmüyordu; 5G zaten hattınızda aktif.\" }" }
+  ]
+},{
+  "id": "SCN_43",
+  "critical_steps": [ "activateInternationalRoaming", "getAvailablePackages"],
+  "conversations": [
+    { "role": "user", "content": "Yurt dışını aktif edin ve bana uygun paketleri listeleyin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only, önce roaming için onay.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming (idempotent olabilir).\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Uygun paketleri çek.\", \"action\": \"getAvailablePackages\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınız aktif/uygun hale getirildi. Size uygun paketleri listeledim.\" }" }
+  ]
+},
+{
+  "id": "SCN_44",
+  "critical_steps": ["checkServiceAvailability",  "scheduleInternetRelocation"],
+  "conversations": [
+    { "role": "user", "content": "Adresimde hizmet uygun mu kontrol edin ve interneti yeni adrese nakil planlayın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hem mevcut hem yeni adres gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi tek satırda paylaşır mısınız? (Örn: Ayvalık Mh. Martı Sk. No: 12, Balıkesir 10010).\" }" },
+    { "role": "user", "content": "Ayvalık Mh. Martı Sk. No: 12, Balıkesir 10010" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hizmet uygunluğu kontrolü.\", \"action\": \"checkServiceAvailability\", \"action_input\": { \"address\": \"Ayvalık Mh. Martı Sk. No: 12, Balıkesir 10010\", \"service\": \"fiber\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil için TC ve onay al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazın; bu adrese nakil talebinizi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "26626005142, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakli planla.\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"26626005142\", \"new_address\": { \"street\": \"Ayvalık Mh. Martı Sk. No: 12\", \"city\": \"Balıkesir\", \"zip_code\": \"10010\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Hizmet uygunluğu kontrol edildi ve nakil talebiniz oluşturuldu.\" }" }
+  ]
+},{
+  "id": "SCN_45",
+  "critical_steps": [ "addAuthorizedContact", "checkContractEndDate"],
+  "conversations": [
+    { "role": "user", "content": "Eşim Ayşe Korkmaz’ı yetkili kişi yapın ve taahhüt bitişimi söyleyin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC ve kişi bilgisi gerek.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız ve eşinizin telefonunu yazar mısınız? (Örn: 26626005142, 0506-445-7788)\" }" },
+    { "role": "user", "content": "26626005142, 0506-445-7788" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili ekleme için onay.\", \"action\": \"Final Answer\", \"action_input\": \"'Ayşe Korkmaz (0506-445-7788)' kişisini yetkili kişi olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"26626005142\", \"contact_name\": \"Ayşe Korkmaz\", \"contact_phone\": \"0506-445-7788\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Taahhüt bitişini bildir.\", \"action\": \"checkContractEndDate\", \"action_input\": { \"user_identifier\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış\", \"action\": \"Final Answer\", \"action_input\": \"Yetkili kişi eklendi. Taahhüt bitişiniz 2025-10-23 görünüyor.\" }" }
+  ]
+},
+{
+  "id": "SCN_46",
+  "critical_steps": ["checkServiceStatus", "getUsageHistory"],
+  "conversations": [
+    { "role": "user", "content": "Hizmet durumumu kontrol edin ve kullanım geçmişimi gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; önce durum sonra geçmiş.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Durumu kontrol et.\", \"action\": \"checkServiceStatus\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanım geçmişini çek.\", \"action\": \"getUsageHistory\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonuçları açıkla.\", \"action\": \"Final Answer\", \"action_input\": \"Hizmetiniz aktif. Aylık ~35 GB/46 Mbps; 738 dk konuşma/171 SMS kullanımı görünüyor.\" }" }
+  ]
+},{
+  "id": "SCN_47",
+  "critical_steps": [ "requestNumberPorting",  "pausePackageTemporarily"],
+  "conversations": [
+    { "role": "user", "content": "Numara taşıma talebi oluşturun (XYZ Mobil’den) ve hattımı 5 günlüğüne durdurun." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; iki işlem için onay.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir? İki işlemi de onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "26626005142, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Porting talebi.\", \"action\": \"requestNumberPorting\", \"action_input\": { \"tc_no\": \"26626005142\", \"from_operator\": \"XYZ Mobil\", \"reason\": \"daha iyi kapsama\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçici durdurma.\", \"action\": \"pausePackageTemporarily\", \"action_input\": { \"tc_no\": \"26626005142\", \"duration_days\": 5, \"reason\": \"kısa süreli kullanım yok\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özet.\", \"action\": \"Final Answer\", \"action_input\": \"Numara taşıma talebiniz oluşturuldu ve hattınız 5 gün süreyle durduruldu.\" }" }
+  ]
+},
+{
+  "id": "SCN_48",
+  "critical_steps": [ "deactivateEsim",  "deactivateChildProfile"],
+  "conversations": [
+    { "role": "user", "content": "eSIM’i pasifleştirin ve çocuk profilini kapatın." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; her iki işlem için onay alacağım. eSIM zaten pasif, çocuk profili kapalı olabilir.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız? İki işlemi de onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "26626005142, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"eSIM zaten pasif olabilir; yine de güvenli şekilde çağır.\", \"action\": \"deactivateEsim\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Çocuk profili muhtemelen kapalı; idempotent davran.\", \"action\": \"deactivateChildProfile\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM zaten pasif durumdaydı; çocuk profili de kapalı. Ek işlem gerekmedi.\" }" }
+  ]
+},
+{
+  "id": "SCN_49",
+  "critical_steps": [ "requestNumberChange",  "activateEsim"],
+  "conversations": [
+    { "role": "user", "content": "Numaramı 0501-777-8899 yapın ve eSIM’i aktifleştirin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only akışı, önce TC alınır.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "26626005" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC formatı geçersiz (eksik hane). İşleme devam edilemez.\", \"action\": \"Final Answer\", \"action_input\": \"Geçersiz T.C. kimlik numarası formatı. Lütfen 11 haneli T.C. kimlik numarası girin.\" }" }
+  ]
+},
+{
+  "id": "SCN_50",
+  "critical_steps": [ "checkInfrastructure", "checkServiceStatus"],
+  "conversations": [
+    { "role": "user", "content": "5G’ye geçmek istiyorum, mümkün mü?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Fadime Demirtaş, 24943356750" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcının cihazı 3G modunda görünüyor, 5G’ye geçiş yapılamaz.\", \"action\": \"Final Answer\", \"action_input\": \"Maalesef cihazınız 5G uyumlu değil, bu yüzden geçiş yapamıyoruz.\" }" }
+  ]
+},
+{
+  "id": "SCN_51",
+  "critical_steps": [ "checkInfrastructure",  "enable5G",  "activateChildProfile"],
+  "conversations": [
+    { "role": "user", "content": "Hattımı 5G’ye geçirmek istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"Adınızı ve T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "Kemal Şahin, 12345678910" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı cihazı 5G uyumlu, altyapı destekliyor, onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçişini onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçiş yapılmalı.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"12345678910\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçiş tamamlandı.\", \"action\": \"Final Answer\", \"action_input\": \"5G’ye geçişiniz tamamlandı.\" }" },
+    { "role": "user", "content": "Bu hattı torunum da kullanacak, çocuk profili de ekleyelim." },
+    { "role": "assistant", "content": "{ \"thought\": \"Şu anda çocuk profili yok, onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"Çocuk profili aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem yapılmalı.\", \"action\": \"activateChildProfile\", \"action_input\": { \"tc_no\": \"12345678910\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Çocuk profili aktif edildi.\", \"action\": \"Final Answer\", \"action_input\": \"Çocuk profili aktifleştirildi, zararlı siteler engellenecek.\" }" }
+  ]
+},
+{
+  "id": "SCN_52",
+  "critical_steps": ["checkInfrastructure",  "enable5G"],
+  "conversations": [
+    { "role": "user", "content": "5G’ye geçmek istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kimlik doğrulaması yapılmalı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": " 24943356750" },
+    { "role": "assistant", "content": "{ \"thought\": \"Diyarbakır 5G kapsamı dışında; yine de onay alıp deneme yapabilirim.\", \"action\": \"Final Answer\", \"action_input\": \"5G’ye geçiş talebinizi onaylıyor musunuz? Altyapı uygun değilse işlem başarısız olabilir.\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Enable dene (şehir 5G listesinde değilse mock fail döner).\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"24943356750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Şehir 5G kapsamı dışında mesajını ilet.\", \"action\": \"Final Answer\", \"action_input\": \"Bulunduğunuz bölgede şu an 5G altyapısı bulunmadığı için geçiş yapılamadı.\" }" }
+  ]
+},
+{
+  "id": "SCN_53",
+  "critical_steps": ["checkInfrastructure",  "enable5G", "getCallHistory"],
+  "conversations": [
+    { "role": "user", "content": "Konya’da 5G’ye geçmek istiyorum, son 5 aramamı da iletin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Sadece TC alacağım.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "12345678906" },
+    { "role": "assistant", "content": "{ \"thought\": \"5G altyapısı muhtemelen yok; yine de onay almam gerek.\", \"action\": \"Final Answer\", \"action_input\": \"5G’ye geçişinizi onaylıyor musunuz? Altyapı uygun değilse işlem başarısız olabilir.\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçişi denerim; başarısız olursa bilgi veririm.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"12345678906\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Çağrı geçmişini de ileteyim.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"12345678906\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İki talebin sonucunu özetle.\", \"action\": \"Final Answer\", \"action_input\": \"Bulunduğunuz bölgede 5G desteği bulunmadığı için geçiş yapılamadı. Son 5 çağrı kaydınızı ilettim.\" }" }
+  ]
+},
+{
+  "id": "SCN_54",
+  "critical_steps": ["checkInfrastructure", "enable5G", "getSupportTicketStatus"],
+  "conversations": [
+    { "role": "user", "content": "Diyarbakır’da 5G’ye geçebilir miyim? Ayrıca destek kaydım var mı?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC ile doğrulama tarzı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "24943356750" },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçiş için onay almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçiş talebinizi onaylıyor musunuz? Altyapı uygun değilse işlem başarısız olabilir.\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"5G'yi denerim.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"24943356750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Destek kaydı var mı bakayım.\", \"action\": \"getSupportTicketStatus\", \"action_input\": { \"tc_no\": \"24943356750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Durumu topla.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçişi yapılamadı (altyapı uygun değil). Şu an aktif bir teknik destek kaydınız görünmüyor.\" }" }
+  ]
+},
+{
+  "id": "SCN_55",
+  "critical_steps": ["getCallHistory",  "enable5G", "getSupportTicketStatus"],
+  "conversations": [
+    { "role": "user", "content": "Dün geceki aramalarımı paylaşın, ayrıca 5G’ye de geçelim mi?" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce TC al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce arama kayıtlarını veririm.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı zaten 5G’de olabilir; yine de prosedür gereği onay.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçişinizi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet." },
+    { "role": "assistant", "content": "{ \"thought\": \"5G zaten aktifse mock buna göre cevaplar.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Destek durumu da sorulabilir, kontrol edeyim.\", \"action\": \"getSupportTicketStatus\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonuçları açıkla.\", \"action\": \"Final Answer\", \"action_input\": \"Son 5 çağrı kaydınızı ilettim. Hattınız zaten 5G için tanımlı. Aktif bir teknik destek kaydınız bulunmuyor.\" }" }
+  ]
+},{
+  "id": "SCN_56",
+  "critical_steps": ["checkServiceStatus",  "enable5G", "getCallHistory"],
+  "conversations": [
+    { "role": "user", "content": "5G’yi açın, bu arada son aramalarıma da bakın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Servis askıda olabilir, önce TC ve sonra durum kontrolü.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı girer misiniz?\" }" },
+    { "role": "user", "content": "20142172960" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hat askıda ise geçiş reddedilir; yine de onay sorayım.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçişinizi onaylıyor musunuz? Hat askıdaysa işlem yapılamaz.\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçişi denerim (askıda olduğu için başarısız beklenir).\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"20142172960\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Çağrı geçmişini yine de sunabilirim.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"20142172960\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özetle.\", \"action\": \"Final Answer\", \"action_input\": \"Hizmetiniz askıya alındığı için 5G’ye geçiş yapılamadı. Son 5 çağrı kaydınızı ilettim.\" }" }
+  ]
+},
+{
+  "id": "SCN_57",
+  "critical_steps": ["removeDataRestriction", "getCallHistory"],
+  "conversations": [
+    { "role": "user", "content": "Bazı siteler kapalı görünüyor, açın ve son 5 aramamı da gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC alıp veri kısıtını kaldırmadan önce onay.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "13322644858" },
+    { "role": "assistant", "content": "{ \"thought\": \"Çocuk profili olabilir; yine de kullanıcı onayı alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"Veri kısıtlamasını kaldırmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kısıtı kaldır.\", \"action\": \"removeDataRestriction\", \"action_input\": { \"tc_no\": \"13322644858\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Arama kayıtlarını ilet.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"13322644858\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kombine sonucu ver.\", \"action\": \"Final Answer\", \"action_input\": \"Veri kısıtlaması kaldırıldı. Son 5 çağrı kaydınızı da paylaştım.\" }" }
+  ]
+}
+,
+{
+  "id": "SCN_58",
+  "critical_steps": ["checkInfrastructure", "enable5G", "getSupportTicketStatus"],
+  "conversations": [
+    { "role": "user", "content": "5G’yi deneyelim, olmazsa bile destek kaydım var mı onu kontrol edin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC ile devam.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı iletir misiniz?\" }" },
+    { "role": "user", "content": "12345678906" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay alıp enable deneyeceğim.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçişinizi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçişi dene.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"12345678906\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Destek durumu da istendi.\", \"action\": \"getSupportTicketStatus\", \"action_input\": { \"tc_no\": \"12345678906\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonuçları birleştir.\", \"action\": \"Final Answer\", \"action_input\": \"5G geçişi başarısız (altyapı uygun değil). Aktif teknik destek kaydınız bulunmuyor; isterseniz yeni bir kayıt açabiliriz.\" }" },
+    { "role": "user", "content": "yok teşekkür ederim" }
+  ]
+},{
+  "id": "SCN_59",
+  "critical_steps": ["getCallHistory", "enable5G"],
+  "conversations": [
+    { "role": "user", "content": "Önce son 5 aramamı gönderin, sonra 5G’ye geçmeyi deneyelim." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC alıp çağrı kayıtlarını getiririm.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı gönderir misiniz?\" }" },
+    { "role": "user", "content": "24943356750" },
+    { "role": "assistant", "content": "{ \"thought\": \"Arama geçmişi.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"24943356750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Ardından 5G onayı alayım.\", \"action\": \"Final Answer\", \"action_input\": \"5G’ye geçişinizi onaylıyor musunuz? Altyapı uygun değilse işlem başarısız olabilir.\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçişi dene.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"24943356750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonucu bildir.\", \"action\": \"Final Answer\", \"action_input\": \"Son 5 çağrı kaydınızı paylaştım. 5G geçişi altyapı uygun olmadığı için tamamlanamadı.\" }" }
+  ]
+},
+{
+  "id": "SCN_60",
+  "critical_steps": ["getCallHistory",  "enable5G", "getSupportTicketStatus"],
+  "conversations": [
+    { "role": "user", "content": "5G açık mı emin değilim; son 5 aramamı ve destek kaydımı da kontrol edin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC al, sonra çağrı geçmişi.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce aramalar.\", \"action\": \"getCallHistory\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"5G’yi doğrulamak için enable denemesi öncesi onay.\", \"action\": \"Final Answer\", \"action_input\": \"5G tanımını kontrol edip gerekiyorsa yeniden etkinleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Zaten 5G ise ‘zaten tanımlı’ döner.\", \"action\": \"enable5G\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Destek durumu da bakılsın.\", \"action\": \"getSupportTicketStatus\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Toplu cevap.\", \"action\": \"Final Answer\", \"action_input\": \"Son 5 çağrı kaydınızı ilettim. Hattınız zaten 5G’ye tanımlı. Aktif destek kaydı bulunmuyor.\" }" }
+  ]
+},{
+  "id": "SCN_61",
+  "critical_steps": [ "requestInstallmentPlan"],
+  "conversations": [
+    { "role": "user", "content": "Faturamı 6 taksite bölün ve sonucu bildirin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Harun’un bekleyen faturası yok; talep geçersiz sayılabilir.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay al ve taksit talebini dene; mock uygun değil döndürecek.\", \"action\": \"Final Answer\", \"action_input\": \"Toplam tutarı 6 taksite bölmemi onaylıyor musunuz? (Bekleyen fatura yoksa işlem reddedilecektir.)\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Bekleyen fatura olmadığından başarısız.\", \"action\": \"requestInstallmentPlan\", \"action_input\": { \"user_identifier\": \"26626005142\", \"total_amount\": 0.0, \"installments\": 6 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçersiz işlem sonucunu aktar.\", \"action\": \"Final Answer\", \"action_input\": \"Geçersiz işlem: Bekleyen faturanız bulunmuyor, taksitlendirilemedi.\" }" }
+  ]
+},
+{
+  "id": "SCN_62",
+  "critical_steps": [ "blockIncomingNumber"],
+  "conversations": [
+    { "role": "user", "content": "Bu numarayı engelleyin: 05AB-123-4567 ve sonucu bildirin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Numara formatı geçersiz; yine de onay alıp denersek mock hata dönecek.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız? İşlemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "26626005142, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Geçersiz numara formatıyla engelleme denemesi hataya düşecek.\", \"action\": \"blockIncomingNumber\", \"action_input\": { \"tc_no\": \"26626005142\", \"number\": \"05AB-123-4567\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hata bilgisini ver.\", \"action\": \"Final Answer\", \"action_input\": \"Geçersiz işlem: Telefon numarası formatı hatalı olduğu için engelleme yapılamadı.\" }" }
+  ]
+},
+{
+  "id": "SCN_68",
+  "critical_steps": [ "scheduleTechnicalSupport",  "suspendLineDueToLoss"],
+  "conversations": [
+    { "role": "user", "content": "Yarın için teknik servis randevusu alın ve hattımı kayıp nedeniyle askıya alın." },
+    { "role": "assistant", "content": "{ \"thought\": \"Randevu detaylarını almalıyım.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız ve randevu saati/konusu nedir? (Örn: 26626005142, 10:30, çekim zayıf)\" }" },
+    { "role": "user", "content": "26626005142, 10:30, çekim zayıf" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce randevu için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Yarın 10:30 için 'çekim zayıf' konulu teknik servis randevusu oluşturmayı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Randevu planla (yarın: 2025-08-16).\", \"action\": \"scheduleTechnicalSupport\", \"action_input\": { \"tc_no\": \"26626005142\", \"issue\": \"çekim zayıf\", \"date\": \"2025-08-16\", \"time\": \"10:30\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Askıya alma için ayrı onay.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı kayıp nedeniyle hemen askıya almamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hat askıya al.\", \"action\": \"suspendLineDueToLoss\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Randevunuz oluşturuldu ve hattınız geçici olarak askıya alındı.\" }" }
+  ]
+},
+{
+  "id": "SCN_69",
+  "critical_steps": [ "activateEsim"],
+  "conversations": [
+    { "role": "user", "content": "Ev internet paketine geçin ve eSIM’i de hemen aktifleştirin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Ev paketine geçiş mobil hattan geçersiz; eSIM aktivasyonu yapılabilir.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız? İki işlem için onayınızı alacağım.\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"eSIM için onay al; ev paketi geçersiz olduğunu ayrıca belirt.\", \"action\": \"Final Answer\", \"action_input\": \"Ev internetine geçiş mobil hat üzerinden yapılamaz. Yine de eSIM aktivasyonunu başlatmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, eSIM’i açın." },
+    { "role": "assistant", "content": "{ \"thought\": \"eSIM aktivasyon çağrısı.\", \"action\": \"activateEsim\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış mesajı.\", \"action\": \"Final Answer\", \"action_input\": \"eSIM aktivasyonunuz başlatıldı. Not: Ev interneti paketine geçiş için sabit bağlantı aboneliği yapılması gerekir.\" }" }
+  ]
+},
+{
+  "id": "SCN_70",
+  "critical_steps": ["checkServiceStatus"],
+  "conversations": [
+    { "role": "user", "content": "Hizmet durumumu kontrol eder misiniz?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only doğrulama yapacağım.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "22100898750" },
+    { "role": "assistant", "content": "{ \"thought\": \"Durumu kontrol et.\", \"action\": \"checkServiceStatus\", \"action_input\": { \"tc_no\": \"22100898750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonucu ilet.\", \"action\": \"Final Answer\", \"action_input\": \"Hizmetiniz aktif görünüyor. Herhangi bir kesinti bulunmuyor.\" }" }
+  ]
+},{
+  "id": "SCN_71",
+  "critical_steps": [ "addAuthorizedContact"],
+  "conversations": [
+    { "role": "user", "content": "Hesabıma bir yetkili kişi eklemek istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ile ilerle ve kişi bilgilerini al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı, eklemek istediğiniz kişinin adını ve telefonunu paylaşır mısınız? (Örnek: 22100898750, Mehmet Ertekin, 0507-111-2233)\" }" },
+    { "role": "user", "content": "22100898750, Mehmet Ertekin, 0507-111-2233" },
+    { "role": "assistant", "content": "{ \"thought\": \"İşlem öncesi onay al.\", \"action\": \"Final Answer\", \"action_input\": \"'Mehmet Ertekin (0507-111-2233)' kişisini yetkili kişi olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"22100898750\", \"contact_name\": \"Mehmet Ertekin\", \"contact_phone\": \"0507-111-2233\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Yetkili kişi başarıyla eklendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_72",
+  "critical_steps": ["pausePackageTemporarily"],
+  "conversations": [
+    { "role": "user", "content": "Hat paketimi kısa bir süreliğine durdurmak istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ve süre bilgisi gerek.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız ve durdurma süresini paylaşır mısınız? (Örnek: 12398364729, 15 gün)\" }" },
+    { "role": "user", "content": "12398364729, 14 gün" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay iste.\", \"action\": \"Final Answer\", \"action_input\": \"Paketinizi 14 gün süreyle geçici olarak durdurmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Durdurmayı başlat.\", \"action\": \"pausePackageTemporarily\", \"action_input\": { \"tc_no\": \"12398364729\", \"duration_days\": 14, \"reason\": \"kısa süreli kullanım yok\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bildir.\", \"action\": \"Final Answer\", \"action_input\": \"Paketiniz 14 gün süreyle geçici olarak durduruldu.\" }" }
+  ]
+},
+{
+  "id": "SCN_73",
+  "critical_steps": [ "requestNumberChange"],
+  "conversations": [
+    { "role": "user", "content": "Numaramı değiştirmek istiyorum, mümkün mü?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ve yeni numara alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı ve istediğiniz yeni numarayı paylaşır mısınız? (Örnek: 15742836684, 0501-222-3344)\" }" },
+    { "role": "user", "content": "15742836684, 0501-222-3344" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı '0501-222-3344' olarak değiştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Numara değişikliğini başlat.\", \"action\": \"requestNumberChange\", \"action_input\": { \"tc_no\": \"15742836684\", \"new_number\": \"0501-222-3344\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış\", \"action\": \"Final Answer\", \"action_input\": \"Numaranız değişiklik işlemi için sıraya alındı. Tamamlandığında bilgilendirileceksiniz.\" }" }
+  ]
+},
+{
+  "id": "SCN_74",
+  "critical_steps": [ "requestNumberPorting"],
+  "conversations": [
+    { "role": "user", "content": "Başka operatördeki numaramı size taşımak istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only, mevcut operatör ve gerekçe al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız, mevcut operatörünüz ve geçiş gerekçenizi paylaşır mısınız? (Örnek: 22100898750, ABC Mobil, yüksek fatura)\" }" },
+    { "role": "user", "content": "22100898750, ABC Mobil, çekim gücü zayıf" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı operatörümüze taşımamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Taşıma talebini oluştur.\", \"action\": \"requestNumberPorting\", \"action_input\": { \"tc_no\": \"22100898750\", \"from_operator\": \"ABC Mobil\", \"reason\": \"çekim gücü zayıf\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonuç\", \"action\": \"Final Answer\", \"action_input\": \"Numara taşıma talebiniz alındı. Onay süreci tamamlandığında bilgilendirileceksiniz.\" }" }
+  ]
+},
+{
+  "id": "SCN_75",
+  "critical_steps": ["checkServiceStatus",  "addAuthorizedContact"],
+  "conversations": [
+    { "role": "user", "content": "Hizmetim açık mı? Bu arada eşimi yetkili kişi olarak ekleyin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only, önce durumu kontrol et, sonra kişi ekleme için bilgiler alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı, eşinizin adını ve telefonunu paylaşır mısınız? (Örnek: 22100898750, Ayşe Ertekin, 0506-555-7788)\" }" },
+    { "role": "user", "content": "22100898750, Ayşe Ertekin, 0506-555-7788" },
+    { "role": "assistant", "content": "{ \"thought\": \"Durumu kontrol et.\", \"action\": \"checkServiceStatus\", \"action_input\": { \"tc_no\": \"22100898750\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili kişi ekleme için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"'Ayşe Ertekin (0506-555-7788)' kişisini yetkili kişi olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"22100898750\", \"contact_name\": \"Ayşe Ertekin\", \"contact_phone\": \"0506-555-7788\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özet\", \"action\": \"Final Answer\", \"action_input\": \"Hizmetiniz aktif. Eşiniz yetkili kişi olarak eklendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_76",
+  "critical_steps": [ "requestNumberChange","addAuthorizedContact", "checkServiceStatus"],
+  "conversations": [
+    { "role": "user", "content": "Numaramı değiştirip bir de iş arkadaşımı yetkili kişi yapalım; son olarak hizmetim açık mı?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ve yeni numara + kişi bilgisi alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı, yeni numaranızı ve yetkili kişiyi (Ad Soyad, Telefon) paylaşır mısınız? (Örnek: 44532619752, 0507-444-8899, Burak Öztürk, 0505-222-1100)\" }" },
+    { "role": "user", "content": "44532619752, 0507-444-8899, Burak Öztürk, 0505-222-1100" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce numara değişikliği için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı '0507-444-8899' olarak değiştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Numara değişikliğini başlat.\", \"action\": \"requestNumberChange\", \"action_input\": { \"tc_no\": \"44532619752\", \"new_number\": \"0507-444-8899\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili kişi için ayrı onay al.\", \"action\": \"Final Answer\", \"action_input\": \"'Burak Öztürk (0505-222-1100)' kişisini yetkili kişi olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"44532619752\", \"contact_name\": \"Burak Öztürk\", \"contact_phone\": \"0505-222-1100\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Son olarak hizmet durumunu kontrol et.\", \"action\": \"checkServiceStatus\", \"action_input\": { \"tc_no\": \"44532619752\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özetle.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranız değişiklik için sıraya alındı, yetkili kişi eklendi ve hizmetiniz aktif görünüyor.\" }" }
+  ]
+},
+{
+  "id": "SCN_77",
+  "critical_steps": [ "pausePackageTemporarily",  "addAuthorizedContact"],
+  "conversations": [
+    { "role": "user", "content": "Tatile gidiyorum, hattı 10 gün durduralım; bu süre boyunca kardeşimi yetkili kişi yapalım." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; süre ve kişi bilgilerini al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı, durdurma süresini ve kardeşinizin ad-soyad/telefon bilgisini yazın. (Örnek: 15742836684, 10 gün, Mert Erdoğan, 0501-666-7788)\" }" },
+    { "role": "user", "content": "15742836684, 10 gün, Mert Erdoğan, 0501-666-7788" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce durdurma için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı 10 gün durdurmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Durdurmayı başlat.\", \"action\": \"pausePackageTemporarily\", \"action_input\": { \"tc_no\": \"15742836684\", \"duration_days\": 10, \"reason\": \"tatil\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili kişi için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"'Mert Erdoğan (0501-666-7788)' kişisini yetkili kişi olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"15742836684\", \"contact_name\": \"Mert Erdoğan\", \"contact_phone\": \"0501-666-7788\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Hat 10 gün durduruldu ve kardeşiniz yetkili kişi olarak eklendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_78",
+  "critical_steps": [ "requestNumberChange",  "pausePackageTemporarily"],
+  "conversations": [
+    { "role": "user", "content": "Numaramı değiştirip hattı 7 günlüğüne de durduralım." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; yeni numara ve süre alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı, yeni numaranızı ve durdurma süresini paylaşır mısınız? (Örnek: 32611872942, 0502-333-9911, 7 gün)\" }" },
+    { "role": "user", "content": "32611872942, 0502-333-9911, 7 gün" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce numara değişimi için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı '0502-333-9911' olarak değiştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Numarayı değiştir.\", \"action\": \"requestNumberChange\", \"action_input\": { \"tc_no\": \"32611872942\", \"new_number\": \"0502-333-9911\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Ardından durdurma için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızı 7 gün durdurmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Durdurmayı başlat.\", \"action\": \"pausePackageTemporarily\", \"action_input\": { \"tc_no\": \"32611872942\", \"duration_days\": 7, \"reason\": \"kısa süreli kullanım yok\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bildir.\", \"action\": \"Final Answer\", \"action_input\": \"Numara değişikliği için talebiniz alındı ve hattınız 7 gün süreyle durduruldu.\" }" }
+  ]
+},
+{
+  "id": "SCN_79",
+  "critical_steps": ["checkServiceStatus", "requestNumberPorting",  "addAuthorizedContact"],
+  "conversations": [
+    { "role": "user", "content": "Hizmet durumumu kontrol edin, ardından iş hattımı size taşımak ve asistanımı yetkili kişi yapmak istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; önce durum, sonra porting için operatör/gerekçe, ardından yetkili kişi.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı; mevcut operatör ve gerekçenizi; asistanınızın ad-soyad ve telefonunu paylaşır mısınız? (Örnek: 44532619752, XYZ Mobil, kapsama sorunu, Zeynep Demir, 0500-123-7788)\" }" },
+    { "role": "user", "content": "44532619752, XYZ Mobil, kapsama sorunu, Zeynep Demir, 0500-123-7788" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce durum.\", \"action\": \"checkServiceStatus\", \"action_input\": { \"tc_no\": \"44532619752\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Porting için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı operatörümüze taşımamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Taşıma talebini oluştur.\", \"action\": \"requestNumberPorting\", \"action_input\": { \"tc_no\": \"44532619752\", \"from_operator\": \"XYZ Mobil\", \"reason\": \"kapsama sorunu\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili kişi için onay.\", \"action\": \"Final Answer\", \"action_input\": \"'Zeynep Demir (0500-123-7788)' kişisini yetkili olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"44532619752\", \"contact_name\": \"Zeynep Demir\", \"contact_phone\": \"0500-123-7788\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özetle.\", \"action\": \"Final Answer\", \"action_input\": \"Hizmetiniz aktif. Numara taşıma talebiniz alındı ve asistanınız yetkili kişi olarak eklendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_80",
+  "critical_steps": ["requestNumberChange", "checkServiceStatus",  "addAuthorizedContact"],
+  "conversations": [
+    { "role": "user", "content": "Önce numaramı değiştirip sonra hizmet durumuma bakalım; en sonda eşimi yetkili kişi yapalım." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only; yeni numara ve yetkili kişi bilgisi alınmalı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız, yeni numaranız ve eşinizin bilgilerini (Ad Soyad, Telefon) paylaşır mısınız? (Örnek: 12398364729, 0504-900-1122, Fatma Yılmaz, 0501-333-4455)\" }" },
+    { "role": "user", "content": "12398364729, 0504-900-1122, Fatma Yılmaz, 0501-333-4455" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce numara değişimi için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı '0504-900-1122' olarak değiştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Değişimi başlat.\", \"action\": \"requestNumberChange\", \"action_input\": { \"tc_no\": \"12398364729\", \"new_number\": \"0504-900-1122\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Durumu kontrol et.\", \"action\": \"checkServiceStatus\", \"action_input\": { \"tc_no\": \"12398364729\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yetkili kişi için onay.\", \"action\": \"Final Answer\", \"action_input\": \"'Fatma Yılmaz (0501-333-4455)' kişisini yetkili kişi olarak eklememi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Kişiyi ekle.\", \"action\": \"addAuthorizedContact\", \"action_input\": { \"tc_no\": \"12398364729\", \"contact_name\": \"Fatma Yılmaz\", \"contact_phone\": \"0501-333-4455\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özet\", \"action\": \"Final Answer\", \"action_input\": \"Numara değişikliği talebiniz alındı, hizmetiniz aktif ve eşiniz yetkili kişi olarak eklendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_81",
+  "critical_steps": ["checkContractEndDate"],
+  "conversations": [
+    { "role": "user", "content": "Taahhüt bitiş tarihim nedir?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ile sorgulama.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı paylaşır mısınız?\" }" },
+    { "role": "user", "content": "13579246801" },
+    { "role": "assistant", "content": "{ \"thought\": \"Taahhüt tarihini mock fonksiyonla çek.\", \"action\": \"checkContractEndDate\", \"action_input\": { \"user_identifier\": \"13579246801\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kayıtlardaki tarihle yanıtla.\", \"action\": \"Final Answer\", \"action_input\": \"Taahhüt bitiş tarihiniz 2026-07-03 görünüyor.\" }" }
+  ]
+},{
+  "id": "SCN_82",
+  "critical_steps": ["checkInfrastructure"],
+  "conversations": [
+    { "role": "user", "content": "Adresimde fiber altyapı var mı?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only değil; bu fonksiyon adres string'i bekler. Adresi iste.\", \"action\": \"Final Answer\", \"action_input\": \"Adresinizi tek satırda yazar mısınız? (Örn: Bahçelievler Mah. Gençlik Cad. No: 19, Ankara 06490)\" }" },
+    { "role": "user", "content": "Bahçelievler Mah. Gençlik Cad. No: 19, Ankara 06490" },
+    { "role": "assistant", "content": "{ \"thought\": \"Altyapı kontrolü.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Bahçelievler Mah. Gençlik Cad. No: 19, Ankara 06490\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Sonucu ilet.\", \"action\": \"Final Answer\", \"action_input\": \"Adresiniz için fiber altyapı uygun görünüyor (örnek).\" }" }
+  ]
+},{
+  "id": "SCN_83",
+  "critical_steps": [ "activateInternationalRoaming"],
+  "conversations": [
+    { "role": "user", "content": "Yurt dışı kullanımımı açar mısınız?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ile ilerleyeceğim.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "20334567789" },
+    { "role": "assistant", "content": "{ \"thought\": \"Açma işlemi için onay gerekir.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming'i aç.\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"20334567789\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Başarılı mesajı ver.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınız başarıyla aktifleştirildi.\" }" }
+  ]
+},{
+  "id": "SCN_83",
+  "critical_steps": [ "activateInternationalRoaming"],
+  "conversations": [
+    { "role": "user", "content": "Yurt dışı kullanımımı açar mısınız?" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ile ilerleyeceğim.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "20334567789" },
+    { "role": "assistant", "content": "{ \"thought\": \"Açma işlemi için onay gerekir.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming'i aç.\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"20334567789\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Başarılı mesajı ver.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınız başarıyla aktifleştirildi.\" }" }
+  ]
+},{
+  "id": "SCN_84",
+  "critical_steps": ["activateInternationalRoaming"],
+  "conversations": [
+    { "role": "user", "content": "Benim hattımda yurt dışı kullanımı açık mı, değilse açın." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ve idempotent çağrı olabilir.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir?\" }" },
+    { "role": "user", "content": "21398765432" },
+    { "role": "assistant", "content": "{ \"thought\": \"Her ihtimale karşı onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı kontrol edip gerekirse açmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Aktivasyon denemesi; zaten açıksa 'zaten açık' döner.\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"21398765432\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Idempotent sonucu ilet.\", \"action\": \"Final Answer\", \"action_input\": \"Hattınızda yurt dışı kullanım zaten açık görünüyor.\" }" }
+  ]
+},{
+  "id": "SCN_85",
+  "critical_steps": [ "sendGiftPackage", "getReceivedGifts"],
+  "conversations": [
+    { "role": "user", "content": "Arkadaşıma 5 GB internet hediye etmek istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only + alıcı numara + paket türü/miktar alınacak.\", \"action\": \"Final Answer\", \"action_input\": \"Lütfen T.C. kimlik numaranızı ve alıcının telefonunu yazın. (Örn: 13579246801, 0543-667-8899). Hediye türü: internet, miktar: 5 GB uygun mudur?\" }" },
+    { "role": "user", "content": "13579246801, 0543-667-8899, internet, 5" },
+    { "role": "assistant", "content": "{ \"thought\": \"Gönderim için onay.\", \"action\": \"Final Answer\", \"action_input\": \"0543-667-8899 numarasına 5 GB internet göndermemi onaylıyor musunuz? Ücret faturaya yansıyacaktır.\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye gönder.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"0543-667-8899\", \"package_type\": \"internet\", \"amount\": 5 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Alıcının aldığı hediyeleri listele.\", \"action\": \"getReceivedGifts\", \"action_input\": { \"user_identifier\": \"21398765432\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Başarılı kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Hediye gönderimi tamamlandı. Alıcının hediye geçmişi güncellendi (son hediyeler listelendi).\" }" }
+  ]
+},{
+  "id": "SCN_86",
+  "critical_steps": [ "requestInstallmentPlan"],
+  "conversations": [
+    { "role": "user", "content": "Bekleyen faturamı taksitlendirmek istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ve tutar + taksit sayısı gerekli.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı, toplam tutarı ve taksit sayısını paylaşır mısınız? (Örn: 12398745610, 660.0, 6)\" }" },
+    { "role": "user", "content": "12398745610, 660.0, 6" },
+    { "role": "assistant", "content": "{ \"thought\": \"Onay iste.\", \"action\": \"Final Answer\", \"action_input\": \"660.0 TL tutarı 6 taksite bölmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet." },
+    { "role": "assistant", "content": "{ \"thought\": \"Taksit talebini oluştur.\", \"action\": \"requestInstallmentPlan\", \"action_input\": { \"user_identifier\": \"12398745610\", \"total_amount\": 660.0, \"installments\": 6 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Talebiniz alındı. 660.0 TL tutar 6 taksite bölündü (örnek).\" }" }
+  ]
+},{
+  "id": "SCN_87",
+  "critical_steps": ["checkInfrastructure", "scheduleInternetRelocation"],
+  "conversations": [
+    { "role": "user", "content": "İnterneti yeni adrese taşımak istiyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Yeni adres alınmalı, önce altyapı kontrol edilebilir.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi iletir misiniz? (Örn: Yeni Mah. Dalgakıran Cad. No: 12, Ordu 25846)\" }" },
+    { "role": "user", "content": "Yeni Mah. Dalgakıran Cad. No: 12, Ordu 25846" },
+    { "role": "assistant", "content": "{ \"thought\": \"Altyapıyı kontrol et.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Yeni Mah. Dalgakıran Cad. No: 12, Ordu 25846\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"TC al ve onay sor.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazın; bu adrese nakil talebinizi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "12398745610, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakli planla.\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"12398745610\", \"new_address\": { \"street\": \"Yeni Mah. Dalgakıran Cad. No: 12\", \"city\": \"Ordu\", \"zip_code\": \"25846\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"İnternet nakil talebiniz oluşturuldu. Planlama detayları randevularınıza eklendi.\" }" }
+  ]
+},{
+  "id": "SCN_88",
+  "critical_steps": [ "requestInstallmentPlan", "activateInternationalRoaming",  "sendGiftPackage"],
+  "conversations": [
+    { "role": "user", "content": "Önce bekleyen faturamı 4 taksite bölün; ardından yurt dışını açın ve anneme 2 GB internet hediye edin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Adımlar çoklu: taksit → roaming → hediye.\", \"action\": \"Final Answer\", \"action_input\": \"Lütfen T.C. kimlik numaranızı ve annenizin telefonunu yazın. (Örn: 13579246801, 05807100280)\" }" },
+    { "role": "user", "content": "13579246801, 05807100280" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce taksit için onay.\", \"action\": \"Final Answer\", \"action_input\": \"799.0 TL tutarı 4 taksite bölmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Taksit talebi.\", \"action\": \"requestInstallmentPlan\", \"action_input\": { \"user_identifier\": \"13579246801\", \"total_amount\": 799.0, \"installments\": 4 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming için onay.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet." },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming denemesi (zaten açık olabilir).\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"13579246801\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye için onay.\", \"action\": \"Final Answer\", \"action_input\": \"05807100280 numarasına 2 GB internet göndermemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye gönder.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"05807100280\", \"package_type\": \"internet\", \"amount\": 2 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Toplu kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Taksitlendirme talebiniz alındı, yurt dışı kullanımınız kontrol edilip aktifleştirildi ve 2 GB hediye gönderildi.\" }" }
+  ]
+},{
+  "id": "SCN_89",
+  "critical_steps": [ "sendGiftPackage", "sendGiftPackage"],
+  "conversations": [
+    { "role": "user", "content": "Arkadaşıma 12 GB internet hediye edeyim." },
+    { "role": "assistant", "content": "{ \"thought\": \"Limit 1–10 GB. Önce parametreleri al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı ve alıcının numarasını yazın. (Örn: 21398765432, 0532-764-2290)\" }" },
+    { "role": "user", "content": "21398765432, 0532-764-2290" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kullanıcı 12 GB istedi; önce onay alıp fonksiyon hata verecek, sonra doğru miktarı önereceğim.\", \"action\": \"Final Answer\", \"action_input\": \"12 GB gönderimi onaylıyor musunuz? (Not: Maksimum 10 GB gönderilebilir.)\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hatalı miktarla dene; mock limit hatası dönecek.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"21398765432\", \"receiver_number\": \"0532-764-2290\", \"package_type\": \"internet\", \"amount\": 12 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kısıtlamayı açıkla ve düzeltme için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Maksimum 10 GB gönderilebilir. 10 GB olarak göndermemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, 10 GB gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Doğru miktarla gönder.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"21398765432\", \"receiver_number\": \"0532-764-2290\", \"package_type\": \"internet\", \"amount\": 10 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Başarı mesajı.\", \"action\": \"Final Answer\", \"action_input\": \"10 GB internet hediyesi gönderildi.\" }" }
+  ]
+},{
+  "id": "SCN_90",
+  "critical_steps": ["checkInfrastructure",  "scheduleInternetRelocation"],
+  "conversations": [
+    { "role": "user", "content": "Nakil istiyorum ama tam adresi toparlayamadım." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil için tam adres dict'i gerekli. Kılavuz ver.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi şu formatta yazın: Sokak/No, Şehir, Posta Kodu (Örn: Bahar Mah. Çiçek Sk. No: 7, Ankara, 06500). Ardından T.C. kimlik numaranızı da ekleyin.\" }" },
+    { "role": "user", "content": "Bahar Mah. Çiçek Sk. No: 7, Ankara, 06500 - T.C.: 13579246801" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce altyapı kontrolü yap.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Bahar Mah. Çiçek Sk. No: 7, Ankara, 06500\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Bu adrese nakil işlemini başlatmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakli planla.\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"13579246801\", \"new_address\": { \"street\": \"Bahar Mah. Çiçek Sk. No: 7\", \"city\": \"Ankara\", \"zip_code\": \"06500\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Nakil talebiniz oluşturuldu; randevu detayları bilgilendirmelerinize eklenecek.\" }" }
+  ]
+},{
+  "id": "SCN_91",
+  "critical_steps": [ "requestInstallmentPlan",  "sendGiftPackage", "getReceivedGifts", "checkContractEndDate"],
+  "conversations": [
+    { "role": "user", "content": "Bekleyen faturamı 3 taksite böl, Seyit’e 5 GB hediye et; sonra taahhüt bitişimi de söyle." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only ile ilerleyeceğim.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "13579246801" },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce taksit için onay.\", \"action\": \"Final Answer\", \"action_input\": \"799.0 TL tutarı 3 taksite bölmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Berkay'ın (user_021) bekleyen faturası var → taksit talebi.\", \"action\": \"requestInstallmentPlan\", \"action_input\": { \"user_identifier\": \"13579246801\", \"total_amount\": 799.0, \"installments\": 3 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"0543-667-8899 (Seyit) numarasına 5 GB internet göndermemi onaylıyor musunuz? Ücret faturaya yansır.\" }" },
+    { "role": "user", "content": "Evet, gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye gönderimi: gönderici Berkay, alıcı Seyit (user_024).\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"0543-667-8899\", \"package_type\": \"internet\", \"amount\": 5 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Alıcı (Seyit) hediye geçmişi.\", \"action\": \"getReceivedGifts\", \"action_input\": { \"user_identifier\": \"21398765432\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Taahhüt bitişi.\", \"action\": \"checkContractEndDate\", \"action_input\": { \"user_identifier\": \"13579246801\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Toplu kapanış yap.\", \"action\": \"Final Answer\", \"action_input\": \"Faturanız 3 taksite bölündü. 5 GB hediye gönderildi ve alıcının hediye geçmişi güncellendi. Taahhüt bitiş tarihiniz 2026-07-03 (örnek).\" }" }
+  ]
+},  
+{
+  "id": "SCN_92",
+  "critical_steps": ["checkInfrastructure", "scheduleInternetRelocation", "checkContractEndDate",  "activateInternationalRoaming"],
+  "conversations": [
+    { "role": "user", "content": "Yeni adrese nakil istiyorum, taahhüt bitişimi de öğreneyim; yurt dışı da aktif olsun." },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce yeni adresi almam gerek.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi tek satırda paylaşır mısınız? (Örn: Sahil Mh. 23. Sk. No: 5, Ordu 25847)\" }" },
+    { "role": "user", "content": "Sahil Mh. 23. Sk. No: 5, Ordu 25847" },
+    { "role": "assistant", "content": "{ \"thought\": \"Altyapı kontrolü.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Sahil Mh. 23. Sk. No: 5, Ordu 25847\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil için TC ve onay al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir? Bu adrese nakil talebinizi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "12398745610, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Alperen (user_023) için nakil planla.\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"12398745610\", \"new_address\": { \"street\": \"Sahil Mh. 23. Sk. No: 5\", \"city\": \"Ordu\", \"zip_code\": \"25847\" } }" } ,
+    { "role": "assistant", "content": "{ \"thought\": \"Taahhüt tarihini bildir.\", \"action\": \"checkContractEndDate\", \"action_input\": { \"user_identifier\": \"12398745610\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming zaten açık olabilir; ama onaylı aktivasyon denemesi yap.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı kontrol edip gerekirse açmamı onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"activateInternationalRoaming idempotent olabilir (user_023 zaten açık).\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"12398745610\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özetle.\", \"action\": \"Final Answer\", \"action_input\": \"Altyapı uygun. Nakil talebiniz oluşturuldu. Taahhüt bitiş: 2026-07-03 (örnek). Yurt dışı kullanımınız zaten açık/aktif edildi.\" }" }
+  ]
+  }
+,
+{
+  "id": "SCN_93",
+  "critical_steps": [ "sendGiftPackage",  "sendGiftPackage"],
+  "conversations": [
+    { "role": "user", "content": "Arkadaşıma dakika hediye etmek istiyorum, olmazsa internet gönderin; sonra birine 12 GB daha yollayalım." },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce TC ve alıcı. İlk deneme 'dakika' → mock reddeder.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız ve ilk alıcının numarası? (Örn: 13579246801, 0543-667-8899)\" }" },
+    { "role": "user", "content": "13579246801, 0543-667-8899" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hatalı paket türüyle dene.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"0543-667-8899\", \"package_type\": \"dakika\", \"amount\": 5 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Mock yalnızca 'internet' kabul eder; düzeltme için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Sadece internet paketi hediye edilebilir. 5 GB internet olarak göndereyim mi?\" }" },
+    { "role": "user", "content": "Evet, gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Doğru türle gönder.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"0543-667-8899\", \"package_type\": \"internet\", \"amount\": 5 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"İkinci hediye: 12 GB limit üstü → uyarı.\", \"action\": \"Final Answer\", \"action_input\": \"İkinci alıcının numarası? 12 GB maksimumu aşar; dilerseniz 10 GB’a düşürüp göndereyim.\" }" },
+    { "role": "user", "content": "05807100280 olsun, 10 GB gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Limit uygun hale getirildi.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"05807100280\", \"package_type\": \"internet\", \"amount\": 10 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"İlk alıcıya 5 GB, ikinci alıcıya 10 GB internet hediyesi gönderildi. Ücretler mevcut faturaya yansıtıldı.\" }" }
+  ]
+},
+{
+  "id": "SCN_94",
+  "critical_steps": [ "activateInternationalRoaming",  "sendGiftPackage", "getReceivedGifts"],
+  "conversations": [
+    { "role": "user", "content": "Yurt dışını açın; ardından Alperen’e 12 GB hediye etmek istiyorum, olmazsa 10 GB olsun; hediyeleri de gösterin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce TC; user_025 (Hasna) roaming kısıtlı → açılabilir.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız nedir?\" }" },
+    { "role": "user", "content": "20334567789" },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınızı aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming’i aç (user_025'te kısıt vardı).\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"20334567789\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye 12 GB limit üstü → kullanıcıdan 10 GB’a düşürme onayı al.\", \"action\": \"Final Answer\", \"action_input\": \"0532-764-2290 (Alperen) numarasına 12 GB gönderim limit üstü. 10 GB olarak göndermemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet, 10 GB gönderin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye gönderimi.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"20334567789\", \"receiver_number\": \"0532-764-2290\", \"package_type\": \"internet\", \"amount\": 10 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Alperen’in (user_023) hediye geçmişini göster.\", \"action\": \"getReceivedGifts\", \"action_input\": { \"user_identifier\": \"12398745610\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Toplu bilgilendir.\", \"action\": \"Final Answer\", \"action_input\": \"Yurt dışı kullanımınız açıldı. 10 GB hediye gönderildi ve alıcının hediye geçmişi listelendi.\" }" }
+  ]
+},
+{
+  "id": "SCN_95",
+  "critical_steps": ["checkInfrastructure",  "scheduleInternetRelocation",  "requestInstallmentPlan"],
+  "conversations": [
+    { "role": "user", "content": "Nakil istiyorum ama adresim tam değil; bir de bekleyen faturamı 6 taksite bölün." },
+    { "role": "assistant", "content": "{ \"thought\": \"Adres formatını netleştir, sonra TC ve onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Adresinizi şu formatta yazın: Sokak/No, Şehir, Posta Kodu (Örn: Bahçeler Mh. Poyraz Sk. No: 18, Ordu, 25840).\" }" },
+    { "role": "user", "content": "Bahçeler Mh. Poyraz Sk. No: 18, Ordu, 25840" },
+    { "role": "assistant", "content": "{ \"thought\": \"Altyapı kontrolü.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Bahçeler Mh. Poyraz Sk. No: 18, Ordu, 25840\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil ve taksit için TC+onay al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazın; bu adrese nakli ve 660.0 TL’yi 6 taksite bölmeyi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "12398745610, Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil planla (user_023).\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"12398745610\", \"new_address\": { \"street\": \"Bahçeler Mh. Poyraz Sk. No: 18\", \"city\": \"Ordu\", \"zip_code\": \"25840\" } }" } ,
+    { "role": "assistant", "content": "{ \"thought\": \"Taksit talebi.\", \"action\": \"requestInstallmentPlan\", \"action_input\": { \"user_identifier\": \"12398745610\", \"total_amount\": 660.0, \"installments\": 6 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Nakil talebiniz oluşturuldu ve 660.0 TL tutar 6 taksite bölündü (örnek).\" }" }
+  ]
+},
+{
+  "id": "SCN_96",
+  "critical_steps": ["getReceivedGifts", "checkInfrastructure",  "scheduleInternetRelocation"],
+  "conversations": [
+    { "role": "user", "content": "Bana gelen hediyeleri gösterin; yurt odasına interneti taşıyacağım." },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce hediyeler → TC al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranız? (Örn: 21398765432)\" }" },
+    { "role": "user", "content": "21398765432" },
+    { "role": "assistant", "content": "{ \"thought\": \"Seyit (user_024) için hediye geçmişi.\", \"action\": \"getReceivedGifts\", \"action_input\": { \"user_identifier\": \"21398765432\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Yeni adresi iste ve altyapı kontrol et.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi yazın (Örn: Yurt Mh. Gençlik Cd. Blok B No: 3, Çorum 19110).\" }" },
+    { "role": "user", "content": "Yurt Mh. Gençlik Cd. Blok B No: 3, Çorum 19110" },
+    { "role": "assistant", "content": "{ \"thought\": \"Altyapı kontrolü.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Yurt Mh. Gençlik Cd. Blok B No: 3, Çorum 19110\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil için onay al ve planla.\", \"action\": \"Final Answer\", \"action_input\": \"Bu adrese nakil talebinizi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil planla.\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"21398765432\", \"new_address\": { \"street\": \"Yurt Mh. Gençlik Cd. Blok B No: 3\", \"city\": \"Çorum\", \"zip_code\": \"19110\" } }" } ,
+    { "role": "assistant", "content": "{ \"thought\": \"Özet.\", \"action\": \"Final Answer\", \"action_input\": \"Hediye geçmişinizi paylaştım. Nakil talebiniz oluşturuldu.\" }" }
+  ]
+},
+{
+  "id": "SCN_97",
+  "critical_steps": [ "sendGiftPackage",  "requestInstallmentPlan", "checkContractEndDate"],
+  "conversations": [
+    { "role": "user", "content": "Önce Hasna’ya 8 GB hediye gönderin; ardından bekleyen faturamı 4 taksite bölün; taahhüt bitişimi de söyleyin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Gönderici Berkay (user_021) olsun; TC alın.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı ve alıcı numarayı yazın (Örn: 13579246801, 05807100280).\" }" },
+    { "role": "user", "content": "13579246801, 05807100280" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye için onay.\", \"action\": \"Final Answer\", \"action_input\": \"05807100280 numarasına 8 GB internet göndermemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye gönder.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"05807100280\", \"package_type\": \"internet\", \"amount\": 8 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Taksit için onay iste.\", \"action\": \"Final Answer\", \"action_input\": \"799.0 TL tutarı 4 taksite bölmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Evet." },
+    { "role": "assistant", "content": "{ \"thought\": \"Taksit talebi.\", \"action\": \"requestInstallmentPlan\", \"action_input\": { \"user_identifier\": \"13579246801\", \"total_amount\": 799.0, \"installments\": 4 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Taahhüt bitişini bildir.\", \"action\": \"checkContractEndDate\", \"action_input\": { \"user_identifier\": \"13579246801\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"8 GB hediye gönderildi, 799.0 TL 4 taksite bölündü. Taahhüt bitişiniz 2026-07-03 (örnek).\" }" }
+  ]
+}
+,
+{
+  "id": "SCN_98",
+  "critical_steps": ["checkInfrastructure",  "scheduleInternetRelocation",  "sendGiftPackage",  "activateInternationalRoaming"],
+  "conversations": [
+    { "role": "user", "content": "Evimi Ankara’ya taşıyorum; nakli planlayalım, ardından Seyit’e 9 GB hediye yollayın; yurt dışını da aktif edin." },
+    { "role": "assistant", "content": "{ \"thought\": \"Önce yeni adresi al ve altyapıyı kontrol et.\", \"action\": \"Final Answer\", \"action_input\": \"Yeni adresinizi tek satırda yazın (Örn: Bahçelievler Mh. Gençlik Cd. No: 19, Ankara 06490).\" }" },
+    { "role": "user", "content": "Bahçelievler Mh. Gençlik Cd. No: 19, Ankara 06490" },
+    { "role": "assistant", "content": "{ \"thought\": \"Altyapı kontrolü.\", \"action\": \"checkInfrastructure\", \"action_input\": { \"address\": \"Bahçelievler Mh. Gençlik Cd. No: 19, Ankara 06490\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakil, hediye ve roaming için TC ve onayları sırayla al.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazın; bu adrese nakli onaylıyor musunuz? Sonrasında 0543-667-8899’a 9 GB hediye ve yurt dışı aktivasyonu için de onayınızı alacağım.\" }" },
+    { "role": "user", "content": "13579246801, Hepsini onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Nakli planla (Berkay).\", \"action\": \"scheduleInternetRelocation\", \"action_input\": { \"user_identifier\": \"13579246801\", \"new_address\": { \"street\": \"Bahçelievler Mh. Gençlik Cd. No: 19\", \"city\": \"Ankara\", \"zip_code\": \"06490\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Hediye gönder.\", \"action\": \"sendGiftPackage\", \"action_input\": { \"sender_id\": \"13579246801\", \"receiver_number\": \"0543-667-8899\", \"package_type\": \"internet\", \"amount\": 9 } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Roaming'i dene (zaten açık olabilir).\", \"action\": \"activateInternationalRoaming\", \"action_input\": { \"user_identifier\": \"13579246801\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Özet.\", \"action\": \"Final Answer\", \"action_input\": \"Nakil talebiniz alındı, 9 GB hediye gönderildi. Yurt dışı kullanımınız zaten açık ya da aktif edildi.\" }" }
+  ]
+},
+{
+  "id": "SCN_100",
+  "critical_steps": [ "requestNumberChange",  "activateEsim"],
+  "conversations": [
+    { "role": "user", "content": "Numaramı 0501-777-8899 olarak değiştirin ve eSIM’i aktifleştirin." },
+    { "role": "assistant", "content": "{ \"thought\": \"TC-only akışı.\", \"action\": \"Final Answer\", \"action_input\": \"T.C. kimlik numaranızı yazar mısınız?\" }" },
+    { "role": "user", "content": "26626005142" },
+    { "role": "assistant", "content": "{ \"thought\": \"İki işlem için onay al.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranızı '0501-777-8899' yapmamı ve eSIM’i aktifleştirmemi onaylıyor musunuz?\" }" },
+    { "role": "user", "content": "Onaylıyorum." },
+    { "role": "assistant", "content": "{ \"thought\": \"Numara değişikliği.\", \"action\": \"requestNumberChange\", \"action_input\": { \"tc_no\": \"26626005142\", \"new_number\": \"0501-777-8899\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"eSIM aktivasyonu.\", \"action\": \"activateEsim\", \"action_input\": { \"tc_no\": \"26626005142\" } }" },
+    { "role": "assistant", "content": "{ \"thought\": \"Kapanış.\", \"action\": \"Final Answer\", \"action_input\": \"Numaranız için değişiklik talebi alındı ve eSIM aktivasyonunuz başlatıldı.\" }" }
+  ]
+}
+]
